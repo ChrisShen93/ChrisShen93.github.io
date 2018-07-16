@@ -1,0 +1,529 @@
+<!doctype html>
+<html ⚡ lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+
+    
+    
+
+    
+    <title>Canvas Note</title>
+
+    
+    
+
+
+
+  
+  
+  <meta name="author" content="ChrisShen93" />
+  <meta name="description" content="Canvas Tutorial Canvas 是一个利用脚本来动态绘制图片及动画的 HTML 标签。
+Canvas 并不被一些老旧的浏览器支持。
+相关术语 Canvas interface element: 实现了规范定义的绘图方法和属性的元素，即 canvas 元素。
+Drawing context: 绘图上下文，一个左上角为 (0, 0) 的笛卡尔坐标平面，往右往下x、y分别增加。
+Immediate-mode: 立即模式，一种绘图模式。当绘图完成后，所有绘图结构将从内存中立即丢弃。canvas即为此种。
+Retained-mode: 残留模式，一种绘图模式。当绘图完成后，所有的绘图结构仍存在于内存中。DOM、SVG即为此种。
+Raster: 光栅风格，一种图形风格。由多行断开的图片（行）组成，每行都包含确定的像素个数。
+基础用法 &amp;lt;canvas id=&amp;quot;tutorial&amp;quot; width=&amp;quot;150&amp;quot; height=&amp;quot;150&amp;quot;&amp;gt;&amp;lt;/canvas&amp;gt;  Canvas 仅有width和height两个属性，默认值是 300px * 150px (width * height)。可以使用 CSS 来定义大小，但是在绘制时图形会伸缩以适应画布。若 CSS 定义的大小与 初始画布 大小比例不一致时，图形会呈现扭曲的状态。
+ 当图形出现扭曲的状态时，可以尝试用 width 和 height 属性来明确定义 Canvas 的宽高，而不用 CSS。
+ id 属性是用来方便标识、获取 canvas 画布的。canvas 也和常规的HTML一样拥有margin、border等样式属性。但是这些属性并不会影响到 canvas 画布中的内容。
+代替内容 &amp;lt;canvas id=&amp;quot;tutorial&amp;quot; width=&amp;quot;150&amp;quot; height=&amp;quot;150&amp;quot;&amp;gt; 您当前的浏览器不支持 canvas &amp;lt;/canvas&amp;gt;  Canvas 标签中的内容将会在不支持 canvas 的浏览器中被渲染。">
+
+  
+  
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@gohugoio" />
+    <meta name="twitter:title" content="Canvas Note" />
+    <meta name="twitter:description" content="Canvas Tutorial Canvas 是一个利用脚本来动态绘制图片及动画的 HTML 标签。
+Canvas 并不被一些老旧的浏览器支持。
+相关术语 Canvas interface element: 实现了规范定义的绘图方法和属性的元素，即 canvas 元素。
+Drawing context: 绘图上下文，一个左上角为 (0, 0) 的笛卡尔坐标平面，往右往下x、y分别增加。
+Immediate-mode: 立即模式，一种绘图模式。当绘图完成后，所有绘图结构将从内存中立即丢弃。canvas即为此种。
+Retained-mode: 残留模式，一种绘图模式。当绘图完成后，所有的绘图结构仍存在于内存中。DOM、SVG即为此种。
+Raster: 光栅风格，一种图形风格。由多行断开的图片（行）组成，每行都包含确定的像素个数。
+基础用法 &amp;lt;canvas id=&amp;quot;tutorial&amp;quot; width=&amp;quot;150&amp;quot; height=&amp;quot;150&amp;quot;&amp;gt;&amp;lt;/canvas&amp;gt;  Canvas 仅有width和height两个属性，默认值是 300px * 150px (width * height)。可以使用 CSS 来定义大小，但是在绘制时图形会伸缩以适应画布。若 CSS 定义的大小与 初始画布 大小比例不一致时，图形会呈现扭曲的状态。
+ 当图形出现扭曲的状态时，可以尝试用 width 和 height 属性来明确定义 Canvas 的宽高，而不用 CSS。
+ id 属性是用来方便标识、获取 canvas 画布的。canvas 也和常规的HTML一样拥有margin、border等样式属性。但是这些属性并不会影响到 canvas 画布中的内容。
+代替内容 &amp;lt;canvas id=&amp;quot;tutorial&amp;quot; width=&amp;quot;150&amp;quot; height=&amp;quot;150&amp;quot;&amp;gt; 您当前的浏览器不支持 canvas &amp;lt;/canvas&amp;gt;  Canvas 标签中的内容将会在不支持 canvas 的浏览器中被渲染。" />
+    <meta name="twitter:image" content="http://47.98.147.69:1313/img/cover.jpg" />
+  
+
+
+
+
+<meta name="generator" content="Hugo 0.42.2">
+
+
+<link rel="canonical" href="http://47.98.147.69:1313/post/canvas-note/">
+<link rel="alternative" href="/index.xml" title="Chris&#39;s site" type="application/atom+xml">
+
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="format-detection" content="telephone=no,email=no,adress=no" />
+
+
+<meta name="robots" content="index,follow" />
+<meta name="referrer" content="origin-when-cross-origin" />
+
+
+
+
+<link rel="icon" href="/img/favicon.ico" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="apple-touch-icon" sizes="120x120" href="/img/avatar.jpg">
+
+
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+<style amp-custom>/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}code,kbd,samp{font-family:monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}[hidden],template{display:none}@font-face{font-family:fe;font-weight:400;font-style:normal;src:url(/fonts/fe.eot);src:url(/fonts/fe.eot#iefix) format("embedded-opentype"),url(/fonts/fe.woff2) format("woff2"),url(/fonts/fe.woff) format("woff"),url(/fonts/fe.ttf) format("truetype"),url(/fonts/fe.svg#fe) format("svg")}.icon{font-family:fe;font-style:normal;speak:none;display:inline-block;text-decoration:inherit;width:1em;text-align:center;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.icon-menu:before{content:"\e802"}.icon-email:before{content:"\e804"}.icon-rss:before{content:"\e803"}.icon-github:before{content:"\f09b"}.icon-dribbble:before{content:"\f31b"}.icon-linkedin:before{content:"\f318"}.icon-twitter:before{content:"\f309"}.icon-facebook:before{content:"\f30c"}.icon-instagram:before{content:"\f16d"}.icon-youtube:before{content:"\f16a"}.icon-google:before{content:"\f30f"}.icon-clock:before{content:"\e800"}.share{font-family:fe;font-weight:400;margin-left:.2rem;display:inline-block;text-align:center;border:none;outline:none;color:#fff;width:30px;height:30px;border-radius:50%}.share-twitter{background-color:#55acee}.share-twitter:before{content:"\f309"}.share-facebook{background-color:#3b5998}.share-facebook:before{content:"\f30c"}.share-google{background-color:#dd4b39}.share-google:before{content:"\f30f"}body{font-size:18px;font-weight:300;line-height:1.618;font-family:Roboto,sans-serif;color:#777;background:#fff;text-rendering:optimizeLegibility;-webkit-overflow-scrolling:touch}a{color:#3f9adc;text-decoration:none;font-weight:600}a:focus,a:hover{opacity:.7;outline:none}amp-img{margin:0 auto;box-shadow:2px 20px 40px 10px rgba(0,0,0,.15)}button:hover{cursor:pointer}.main{margin-left:20rem;padding:1rem 2rem;max-width:100%;min-height:100vh;box-sizing:border-box}@media screen and (max-width:1440px){.main{width:calc(100% - 20rem)}}@media (min-width:800px) and (max-width:960px){.main{margin-left:15rem;width:calc(100% - 15rem)}}@media screen and (max-width:800px){.main{margin-left:0;padding:0 1rem 1rem;width:100%;min-height:0;border-left:none;border-right:none;border-top:1px solid #ddd;border-bottom:1px solid #ddd}}.footer{display:none}@media screen and (max-width:800px){.footer{display:block;padding:1rem;font-size:.8rem;text-align:center;font-family:Roboto Mono,Menlo,Monaco,Consolas,Courier New,monospace}}.header{position:fixed;left:0;top:0;bottom:0;width:20rem;padding:1rem;box-sizing:border-box;text-align:center;background-color:rgba(106,172,14,.9)}@media screen and (max-width:800px){.header{width:100%;position:relative}}@media (min-width:800px) and (max-width:960px){.header{width:15rem}}.logo{margin-top:3rem;border-radius:20%;border:4px solid #fff;transition:all .5s ease-out}.logo:hover{border-radius:50%;box-shadow:0 1px 4px rgba(0,0,0,.3)}@media screen and (max-width:800px){.logo{position:absolute;top:1rem;left:1rem;width:2rem;height:2rem;margin-top:0;border:2px solid #fff}}.title{font-size:1.5rem;font-family:Roboto,sans-serif;font-weight:600;margin:1rem auto}@media screen and (max-width:800px){.title{margin:0 auto}}.subtitle,.title a{color:#fff}.subtitle{margin-bottom:1rem;opacity:.8}.menu{display:none}@media screen and (min-width:800px){.menu{display:block}}.menu-list{list-style:none;padding:0}.menu-item{padding:1rem 0}.menu-item a{font-weight:100;opacity:.8;color:#fff}.menu-item a:focus,.menu-item a:hover{opacity:1}.menu-item.is-active a{color:#444;opacity:1;font-weight:700}.menu-toggle{border:none;outline:none;font-size:2rem;background-color:transparent;color:#fff;position:absolute;top:1rem;right:1rem}@media screen and (min-width:800px){.menu-toggle{display:none}}.sidebar{background-color:#fff;width:100vw}@media screen and (min-width:640px){.sidebar{width:50vw}}.sidebar-list{list-style:none;padding:0;margin:0}.sidebar-menu{text-align:right;padding:16px}.sidebar-item{font-size:2rem;padding:30px 35px 30px 25px;border-top:1px solid #ddd}.sidebar-item:hover{background-color:#f2f2f2}.sidebar-icon{border:none;outline:none;background-color:transparent;font-family:Roboto,sans-serif;font-weight:100;font-size:2rem}.sidebar-link{color:#000;font-weight:100}.social-list{margin:0;padding:0;list-style:none}@media screen and (min-width:800px){.social-list{position:absolute;bottom:10px;left:0;right:0}}.social-item{display:inline-block;margin:0 .2rem}.social-item a{color:#fff;font-weight:400}.entry-list{background-color:#f2f2f2}@media screen and (max-width:800px){.entry-list{padding-top:30px}}.entry-single{line-height:1.8;margin-bottom:22px;background-color:#fff;box-shadow:0 0 2px 0 rgba(137,146,177,.15),0 3px 10px 0 rgba(137,146,177,.1);border-radius:5px}.entry-single:hover{box-shadow:0 1px 15px 0 rgba(137,146,177,.15),0 10px 20px 0 rgba(137,146,177,.15)}.entry-cover{max-width:100%;border-radius:5px 5px 0 0;-o-object-fit:cover;object-fit:cover;box-shadow:none}.entry-title{margin:0;padding:20px 30px 0}.entry-link{font-size:1.5rem;font-weight:600;color:#262626}.entry-summary{padding:0 30px;text-align:justify;max-height:4rem;overflow:hidden}.entry-footer{margin:0 30px;padding:10px 0;border-top:1px solid #ddd;display:flex;justify-content:space-between}.entry-meta{margin:0;font-size:.8rem;letter-spacing:1px;text-transform:uppercase}.entry-time{color:#444}.entry-time:after{content:"";border-right:1px solid #ddd;margin:0 8px 0 10px}.pagination{display:flex;justify-content:flex-start}.pagination-btn{color:#777;padding:.8rem;background-color:#fff;border:1px solid #ddd;font-size:.8rem;text-transform:uppercase;border-radius:5px}.pagination-btn:focus,.pagination-btn:hover{color:#fff;background-color:#6aac0e;border-color:#6aac0e}.pagination-next{margin-left:auto}.post-header:after{display:block;content:"";border-bottom-width:3px;border-bottom-style:solid;width:60px;padding-top:10px;border-bottom-color:#6aac0e}.post-title{font-size:2rem;color:#262626;line-height:1.5;margin-top:1.5rem;margin-bottom:.5rem}.post-footer{margin:1rem 0;line-height:1.8}.post-tags{margin-top:0;margin-bottom:1rem;padding-left:0}.post-tag{display:inline-block;margin:0 .5rem 0 0;border-radius:3px;padding:5px 10px;background:#f2f2f2;font-size:.8rem}.post-tag:hover{background:#ddd;box-shadow:0 1px 15px 0 rgba(137,146,177,.15),0 10px 20px 0 rgba(137,146,177,.15)}.post-content{line-height:1.8}.post-content h1,.post-content h2,.post-content h3,.post-content h4,.post-content h5,.post-content h6{color:#6cb505;font-weight:700;line-height:1.125}.post-content h1{margin-top:2rem;margin-bottom:1rem;font-size:2rem}.post-content h2{margin-top:1.75rem;margin-bottom:.75rem;font-size:1.5rem}.post-content h3{margin-top:1.5rem;margin-bottom:.5rem;font-size:1.25rem}.post-content h4{margin-top:1.25rem;margin-bottom:.25rem;font-size:1rem}.post-content h5,.post-content h6{margin-top:1rem;margin-bottom:0;font-size:.8rem}.post-content li+li{margin-top:.5rem}.post-content em{color:#777;font-style:italic}.post-content strong{color:#444}.post-content del{color:#777;text-decoration:line-through}.post-content ins{color:#444;text-decoration:underline}.post-content hr{position:relative;margin:2rem auto;border-top:1px dashed #ddd;border-bottom:none}.post-content hr:before{content:"sep line";position:absolute;top:-12px;left:calc(50% - 40px);padding:0 .5rem;background-color:#fff;color:#ddd;font-size:.8rem;font-family:Roboto Mono,Menlo,Monaco,Consolas,Courier New,monospace}.post-content p{margin-top:1.5rem;margin-bottom:1.5rem;text-align:justify}.post-content blockquote{background-color:#f2f2f2;border-left:5px solid #ddd;padding:.5rem 1rem;margin:2rem 0}.post-content blockquote p{margin-top:.5rem;margin-bottom:.5rem}.post-content blockquote cite{margin-top:1.5rem;color:#777;font-size:.9rem}.post-content code,.post-content tt{padding:0;padding-top:.2em;padding-bottom:.2em;margin:0;font-size:.9em;background-color:#ddd;font-family:Roboto Mono,Menlo,Monaco,Consolas,Courier New,monospace}.post-content code:after,.post-content code:before,.post-content tt:after,.post-content tt:before{letter-spacing:-.2em;content:"\00a0"}.post-content kbd{display:inline-block;padding:.25em;background-color:#f2f2f2;border:1px solid #ddd;border-bottom-color:#ddd;border-radius:3px;box-shadow:inset 0 -1px 0 rgba(0,0,0,.05);font-size:.8em;line-height:1.25;font-family:Roboto Mono,Menlo,Monaco,Consolas,Courier New,monospace;color:#777}.post-content pre{margin:2rem auto;padding:1rem;overflow-x:auto;border-radius:3px;font-size:.9rem;line-height:1.618;white-space:pre;word-wrap:normal;word-break:normal;background:#ddd;color:#777}.post-content pre code{font-size:.9rem;background-color:transparent}.post-content pre code:after,.post-content pre code:before{content:none}.post-content sub,.post-content sup{font-size:.8rem}.post-content sub a,.post-content sub a:focus,.post-content sub a:hover,.post-content sup a,.post-content sup a:focus,.post-content sup a:hover{border-bottom:none}.post-content ol{margin-left:0;margin-top:2rem;margin-bottom:2rem;padding-left:1.5rem;list-style:decimal outside}.post-content ol ol{margin-top:.5rem;margin-bottom:.5rem;list-style:lower-roman outside}.post-content ol ul{margin-top:.5rem;margin-bottom:.5rem;list-style:disc outside}.post-content ul{margin-left:0;margin-top:2rem;margin-bottom:2rem;padding-left:1.5rem;list-style:disc outside}.post-content ul ul{margin-top:.5rem;margin-bottom:.5rem;list-style:circle outside}.post-content ul ol{margin-top:.5rem;margin-bottom:.5rem;list-style:decimal outside}.post-content dl{margin-top:2rem;margin-bottom:2rem}.post-content dl dt{color:#6aac0e;margin-top:1rem}.post-content dl dt:after{content:":"}.post-content dl dd{text-indent:2rem;margin-left:0;margin-top:.25rem}.post-content figure{display:block;margin:2rem auto}.post-content figure img{max-width:100%;box-shadow:2px 20px 40px 10px rgba(0,0,0,.15)}@media screen and (max-width:800px){.post-content figure img{box-shadow:none}}.post-content figure figcaption h4{color:#ddd;font-size:.9rem;text-align:center}table{background-color:#f2f2f2;color:#444;margin:2rem auto;width:100%;border-collapse:collapse;border-radius:5px}table td,table th{border:1px solid #ddd;border-width:0 0 1px;padding:.5em .75em;vertical-align:center}table th{color:#444}table tr:hover{background-color:#ddd}table thead td,table thead th{border-width:0 0 2px;color:#777}table tfoot td,table tfoot th{border-width:2px 0 0;color:#777}table tbody tr:last-child td,table tbody tr:last-child th{border-bottom-width:0}table tr:first-child th:first-child{border-top-left-radius:5px}table tr:first-child th:last-child{border-top-right-radius:5px}table tr:last-child td:first-child{border-bottom-left-radius:5px}table tr:last-child td:last-child{border-bottom-right-radius:5px}.not-found{margin:5rem auto 0;font-family:Roboto Mono,Menlo,Monaco,Consolas,Courier New,monospace;text-align:center}.error-emoji{color:#444;font-size:3rem}.error-text{font-size:1.25rem}.error-link{margin-top:2rem;font-size:1rem;color:#6aac0e}</style>
+
+  </head>
+  <body>
+    <amp-sidebar id="sidebar" class="sidebar" layout="nodisplay" side="right">
+  <ul class="sidebar-list">
+    <li class="sidebar-menu"><button class="sidebar-icon" on="tap:sidebar.close">X</button></li>
+    
+    
+    
+    
+  </ul>
+</amp-sidebar>
+
+    
+  <header class="header">
+  <amp-img alt="Chris&#39;s site"
+    width="128px"
+    height="128px"
+    class="logo"
+    src="/img/avatar.jpeg"
+    sizes="(max-width: 800px) 36px, 128px">
+  </amp-img>
+  
+    <h2 class="title"><a href="http://47.98.147.69:1313/" title="Chris&#39;s site">Chris&#39;s site</a></h2>
+  
+  <p class="subtitle"></p>
+  <button class="menu-toggle" type="button" on="tap:sidebar.open">
+    <span class="icon icon-menu"></span>
+  </button>
+
+  
+  <nav class="menu">
+    <ul class="menu-list">
+      
+      
+      
+      
+    </ul>
+  </nav>
+
+  <ul class="social-list">
+  
+  <li class="social-item">
+    <a href="mailto:chrisshen93@gmail.com" title="Email"><span class="icon icon-email"></span></a>
+  </li>
+
+  
+  <li class="social-item">
+    <a href="//github.com/chrisshen93" title="GitHub"><span class="icon icon-github"></span></a>
+  </li>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <li class="social-item">
+    <a href="/index.xml" title="RSS"><span class="icon icon-rss"></span></a>
+  </li>
+</ul>
+
+</header>
+
+  <section class="main post-detail">
+    <header class="post-header">
+      <h1 class="post-title">Canvas Note</h1>
+      <p class="entry-meta"><span class="entry-time">Jul 14, 2018</span> 5 min read</p>
+    </header>
+    
+
+    <article class="post-content">
+
+<h1 id="canvas-tutorial">Canvas Tutorial</h1>
+
+<p>Canvas 是一个利用脚本来动态绘制图片及动画的 HTML 标签。</p>
+
+<p>Canvas 并不被一些老旧的浏览器支持。</p>
+
+<h2 id="相关术语">相关术语</h2>
+
+<p>Canvas interface element: 实现了规范定义的绘图方法和属性的元素，即 <em>canvas</em> 元素。</p>
+
+<p>Drawing context: 绘图上下文，一个左上角为 (0, 0) 的笛卡尔坐标平面，往右往下x、y分别增加。</p>
+
+<p>Immediate-mode: 立即模式，一种绘图模式。当绘图完成后，所有绘图结构将从内存中立即丢弃。canvas即为此种。</p>
+
+<p>Retained-mode: 残留模式，一种绘图模式。当绘图完成后，所有的绘图结构仍存在于内存中。DOM、SVG即为此种。</p>
+
+<p>Raster: 光栅风格，一种图形风格。由多行断开的图片（行）组成，每行都包含确定的像素个数。</p>
+
+<h2 id="基础用法">基础用法</h2>
+
+<pre><code class="language-javascript">&lt;canvas id=&quot;tutorial&quot; width=&quot;150&quot; height=&quot;150&quot;&gt;&lt;/canvas&gt;
+</code></pre>
+
+<p>Canvas 仅有width和height两个属性，默认值是 300px * 150px (width * height)。可以使用 CSS 来定义大小，但是在绘制时图形会伸缩以适应画布。若 CSS 定义的大小与 初始画布 大小比例不一致时，图形会呈现扭曲的状态。</p>
+
+<blockquote>
+<p>当图形出现扭曲的状态时，可以尝试用 width 和 height 属性来明确定义 Canvas 的宽高，而不用 CSS。</p>
+</blockquote>
+
+<p>id 属性是用来方便标识、获取 canvas 画布的。canvas 也和常规的HTML一样拥有margin、border等样式属性。但是这些属性并不会影响到 canvas 画布中的内容。</p>
+
+<h4 id="代替内容">代替内容</h4>
+
+<pre><code class="language-javascript">&lt;canvas id=&quot;tutorial&quot; width=&quot;150&quot; height=&quot;150&quot;&gt;
+  您当前的浏览器不支持 canvas
+  &lt;/canvas&gt;
+</code></pre>
+
+<p>Canvas 标签中的内容将会在不支持 canvas 的浏览器中被渲染。</p>
+
+<p>参考阅读： <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility">make canvas more accessible</a></p>
+
+<h4 id="结束标签">结束标签</h4>
+
+<p>Canvas 的结束标签 &lt;/canvas&gt; 必须存在。</p>
+
+<h3 id="渲染上下文">渲染上下文</h3>
+
+<pre><code class="language-javascript">let canvas = document.getElementById('tutorial')
+let ctx = canvas.getContext('2d')
+</code></pre>
+
+<p>首先先要得到 canvas 对象。 canvas 对象上有一个 getContext 方法，该方法用来获得 <strong>渲染上下文</strong> 和 绘图功能。</p>
+
+<h3 id="浏览器支持性检查">浏览器支持性检查</h3>
+
+<pre><code class="language-javascript">let canvas = document.getElementById('tutorial')
+if (canvas.getContext) {
+    let ctx = canvas.getContext('2d')
+      // other code
+} else {
+    console.log('浏览器不支持canvas')
+}
+</code></pre>
+
+<p>可以利用 getContext 方法存在与否来检查浏览器的支持性。</p>
+
+<h2 id="使用-canvas-绘制图形">使用 Canvas 绘制图形</h2>
+
+<h3 id="栅格和坐标空间">栅格和坐标空间</h3>
+
+<p>canvas 元素默认被网格锁覆盖。通常来说网格中的一个单元相当于canvas元素中的一像素。</p>
+
+<p>栅格的起点为左上角（坐标为(0, 0)），所有元素的位置都相对于原点定位。</p>
+
+<h3 id="绘制矩形">绘制矩形</h3>
+
+<p>矩形是canvas中唯一支持的原生图形。所有其他的图形都需要通过生成路径的方式绘制。</p>
+
+<p>canvas中绘制矩形有三种方法：</p>
+
+<pre><code class="language-javascript">let canvas = document.getElementById('tutorial')
+let ctx = canvas.getContext('2d')
+// 绘制一个填充的矩形
+ctx.fillRect(x, y, width, height)
+// 绘制一个矩形的边框
+ctx.strokeRect(x, y, width, height)
+// 清除指定矩形区域，清除部分完全透明
+ctx.clearRect(x, y, width, height)
+</code></pre>
+
+<p>这三个方法执行后会即时生效，立刻显示在canvas画布中。</p>
+
+<h3 id="绘制路径">绘制路径</h3>
+
+<p>图形的基本元素是路径。路径是通过不同颜色和宽度的线段或曲线相连形成的不同形状的点的集合。</p>
+
+<p>一个路径，甚至一个子路径，必须是闭合的。</p>
+
+<p>使用路径绘制图形一般有以下几个步骤：</p>
+
+<ol>
+<li>创建路径起始点</li>
+<li>使用 <strong>画图命令</strong> 画出路径</li>
+<li>闭合路径</li>
+<li>路径生成后，可通过描边或填充路径区域来渲染图形</li>
+</ol>
+
+<p>一些需要用到的API</p>
+
+<pre><code class="language-javascript">// 新建一条路径，生成后，图形绘制命令被指向到路径上生成路径
+// 路径由子路径构成，子路径存在一个列表中，所有的子路径（线、弧形、etc）构成图形
+// 调用该方法后，列表会被清空重置。之后可以绘制新的图形
+// beginPath() 之后，应总使用 moveTo() 设定起始位置。
+beginPath()
+
+// 闭合路径之后图形绘制命令又重新指向到上下文中
+// 该命令会绘制一条从当前点到起始点的直线来闭合图形
+// 调用 fill() 函数，图形将自动闭合。stroke() 不会。
+closePath()
+
+// 通过线条来绘制图形轮廓
+stroke()
+
+// 通过填充路径的内容区域生成实心的图形
+fill()
+</code></pre>
+
+<h4 id="一些常用的api">一些常用的API</h4>
+
+<pre><code class="language-javascript">// 将笔触移动到指定的坐标(x, y)上
+ctx.moveTo(x, y)
+
+// 绘制一条从当前位置到指定坐标(x, y)的直线
+ctx.lineTo(x, y)
+
+// 绘制一个以(x, y)为圆心，以radius为半径的圆弧或者圆
+// 从startAngle开始到endAngle结束，按照anticlockwise给定的方向（默认为顺时针）
+// anticlockwise 为false时为顺时针
+// startAngle endAngle 的单位为弧度
+// 弧度和角度的转换： radians = (Math.PI / 180) * degrees
+ctx.arc(x, y, radius, startAngle, endAngle, anticlockwise)
+
+// 二次贝塞尔曲线
+// (cp1x, cp1y)为控制点，(x, y)为结束点
+ctx.quadraticCurveTo(cp1x, cp1y, x, y)
+
+// 三次贝塞尔曲线
+// (cp1x, cp1y)为控制点一
+// (cp2x, cp2y)为控制点二
+// (x, y)为结束点
+ctx.bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y)
+</code></pre>
+
+<h3 id="path2d-对象">Path2D 对象</h3>
+
+<p>利用 Path2D 对象，可以缓存或记录绘制命令，使得快速回顾路径成为可能。</p>
+
+<p>使用方法：</p>
+
+<pre><code class="language-javascript">// 空的Path对象
+new Path2D()
+// 克隆Path对象
+new Path2D(path)
+// 从SVG建立Path对象
+new Path2D(d)
+
+// 添加一条路径到当前路径，可以使一个变换矩阵
+Path2D.addPath(path [, transform])
+</code></pre>
+
+<p>一个使用案例，画了一个空心的矩形和一个黑色的实心圆：</p>
+
+<pre><code class="language-javascript">function draw () {
+    let canvas = document.getElementById('tutorial')
+      if (canvas.getContext) {
+            let ctx = canvas.getContext('2d')
+
+                let rectangle = new Path2D()
+                    rectangle.rect(10, 10, 50, 50)
+
+                        let circle = new Path2D()
+                            circle.moveTo(125, 35)
+                                circle.arc(100, 35, 25, 0, 2 * Math.PI)
+
+                                    ctx.stroke(rectangle)
+                                        ctx.fill(circle)
+                                          }
+}
+</code></pre>
+
+<h2 id="canvas-的状态">Canvas 的状态</h2>
+
+<p>每个上下文都包含一个绘图状态的堆，绘图状态包括：</p>
+
+<ul>
+<li>当前的 transformation matrix</li>
+<li>当前的 clipping region</li>
+<li>当前的属性值：fillStyle, font, globalAlpha, globalCompositeOperation, lineCap, lineJoin, lineWidth, miterLimit, shadowBlur, shadowColor, shadowOffsetX, shadowOffsetY, strokeStyle, textAlign, textBaseline</li>
+</ul>
+
+<blockquote>
+<p>当前 path 和当前 bitmap 不是绘图状态的一部分。
+当前 path 是持久存在的，仅能被 beginPath() 复位
+当前 bitmap 是 canvas 的属性，而非绘图上下文</p>
+</blockquote>
+
+<p>绘图状态是当前画面应用的所有样式和变形的一个快照。状态的应用可以避免绘图代码的过度膨胀。</p>
+
+<h2 id="apis">APIs</h2>
+
+<p>DOM:</p>
+
+<pre><code>interface CanvasElement: Element {
+    attribute unsigned long width;
+    attribute unsigned long height;
+
+    Object getContext(in DOMString contextId);
+    DOMString toDataURL(optional in DOMString type, in any... args);
+};
+</code></pre>
+
+<pre><code>CanvasRenderingContext2D {
+    // back-reference to the canvas
+    readonly attribute HTMLCanvasElement canvas;
+
+    // state
+    void restore();   // pop state stack and restore state
+    void save();      // push state on state stack
+
+    // transformations
+    // default transform is the identity matrix
+    void rotate(in float angle);
+    void scale(in float x, in float y);
+    void setTransform(in float m11, in float m12, in float m21, in float m22, in float dx, in float dy);
+    void transform(in float m11, in float m12, in float m21, in float m22, in float dx, in float dy);
+    void translate(in float x, in float y);
+    
+    // composition
+    attribute float globalAlpha;    // default to 1.0
+    attribute DOMString globalCompositeOperation;   // default to source-over
+    
+    // colors and styles
+    attribute any fillStyle;      // default black
+    attribute any strokeStyle;    // default black
+    CanvasGradient createLinearGradient(in float x0, in float y0, in float x1, in float y1);
+    CanvasGradient createRadialGradient(in float x0, in float y0, in float r0, in float x1, in float y1, in float r1);
+    CanvasPattern createPattern(in HTMLCanvasElement image, in DOMString repetition);
+    
+    // line styles
+    attribute DOMString lineCap;      // 'butt'(default), 'round', 'square'
+    attribute DOMString lineJoin;     // 'miter'(default), 'round', 'bevel'
+    attribute float lineWidth;        // default 1
+    attribute float miterLimit;       // default 10
+    
+    // shadows
+    attribute float shadowBlur;       // default 0
+    attribute DOMString shadowColor;  // default transparent black
+    attribute float shadowOffsetX;    // default 0
+    attribute float shadowOffsetY;    // default 0
+    
+    // rects
+    void clearRect(in float x, in float y, in float width, in float height);
+    void fillRect(in float x x, in float y, in float width, in float height);
+    void strokeRect(in float x, in float y, in float width, in float height);
+    
+    // Complex shapes (paths) API
+    void arc(in float x, in float y, in float radius, in float startAngle, in float endAngle, in boolean anticlockwise);
+    void arcTo(in float x1, in float y1, in float x2, in float y2, in float radius);
+    void beginPath();
+    void bezierCurveTo(in float cp1x, in float cp1y, in float cp2x, in float cp2y, in float x, in float y);
+    void clip();
+    void closePath();
+    void fill();
+    void lineTo(in float x, in float y);
+    void MoveTo(in float x, in float y);
+    void quadraticCurveTo(in float cpx, in float cpy, in float x, in float y);
+    void rect(in float x, in float y, in float width, in float height);
+    void stroke();
+    boolean isPointInPath(in float x, in float y);
+    
+    // text
+    attribute DOMString font;     // default 10px sans-serif
+    attribute DOMString textAlign;    // 'start'(default), 'end', 'left', 'right', 'center'
+    attribute DOMString textBaseline; // 'top'(default), 'handing', 'middle', 'alphabetic', 'ideographic', 'bottom'
+    void fillText(in DOMString text, in float x, in float y, optional in float maxWidth);
+    TextMetrics measureText(in DOMString text);
+    void strokeText(in DOMString text, in float x, in float y, optional in float maxWidth);
+    
+    // drawing images
+    void drawImage(in HTMLImageElement image, in float dx, in float dy, optional in float dw, in float dh);
+    viod drawImage(in HTMLImageElement image, in float sx, in float sy, in float sw, in float sh, in float dx, in float dy, in float dw, in float dh);
+    
+    // pixel manipulation
+    ImageData createImageData(in float sw, in float sh);
+    ImageData createImageData(in ImageData imagedata);
+    ImageData getImageData(in float sx, in float sy, in float sw, in float sh);
+    void putImageData(in ImageData imagedata, in float dx, in float dy, optional in float dirtyX, in float dirtyY, in float dirtyWidth, in float dirtyHeight);
+};
+</code></pre>
+
+<pre><code>interface CanvasGradient {
+    // opaque object
+    void addColorStop(in float offset, in DOMString color);
+};
+
+interface CanvasPattern {
+    // opaque object
+};
+
+interface TextMetrics {
+    readonly attribute float width;
+};
+
+interface ImageData {
+    readonly attribute CanvasPixelArray data;
+    readonly attribute unsigned long height;
+    readonly attribute unsigned long width;
+};
+
+interface CanvasPixelArray {
+    readonly attribute unsigned long length;
+    getter octet(in unsigend long index);
+    setter vold(in unsigned long index, in octet value);
+}
+</code></pre>
+</article>
+    <footer class="post-footer">
+      
+      <ul class="post-tags">
+        
+          <li class="post-tag"><a href="/tags/note"><span class="tag">Note</span></a></li>
+        
+          <li class="post-tag"><a href="/tags/canvas"><span class="tag">Canvas</span></a></li>
+        
+      </ul>
+      
+      <div class="sharing">
+        <a class="share share-facebook" target="_blank" href="https://facebook.com/sharer/sharer.php?u=http%3a%2f%2f47.98.147.69%3a1313%2fpost%2fcanvas-note%2f" title="Share on Facebook"></a>
+        <a class="share share-twitter" target="_blank" href="https://twitter.com/intent/tweet/?text=Canvas%20Note&amp;url=http%3a%2f%2f47.98.147.69%3a1313%2fpost%2fcanvas-note%2f" title="Share on Twitter"></a>
+        <a class="share share-google" target="_blank" href="https://plus.google.com/share?url=Canvas%20Note&amp;url=http%3a%2f%2f47.98.147.69%3a1313%2fpost%2fcanvas-note%2f" title="Share on Google+"></a>
+      </div>
+    </footer>
+  </section>
+  <footer class="footer">
+  <p>Copyright © 2018 Chris&#39;s site</p>
+  <p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with theme <a href="https://github.com/huyb1991/hugo-lamp" title="Hugo LAMP" target="_blank">LAMP</a>.</p>
+</footer>
+
+
+
+
+
+<amp-analytics type=googleanalytics>
+  <script type=application/json>
+    {
+      "vars": { "account": "UA-XXXXXXXX-X" },
+      "triggers": { "trackPageview": { "on": "visible", "request": "pageview" } }
+    }
+  </script>
+</amp-analytics>
+
+
+
+  </body>
+</html>
