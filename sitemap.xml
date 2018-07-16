@@ -3,41 +3,41 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://47.98.147.69:1313/post/canvas-note/</loc>
+    <loc>https://chrisshen93.github.io/post/canvas-note/</loc>
     <lastmod>2018-07-14T08:58:12+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://47.98.147.69:1313/tags/canvas/</loc>
-    <lastmod>2018-07-14T08:58:12+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://47.98.147.69:1313/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://47.98.147.69:1313/</loc>
+    <loc>https://chrisshen93.github.io/tags/canvas/</loc>
     <lastmod>2018-07-14T08:58:12+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://47.98.147.69:1313/tags/note/</loc>
+    <loc>https://chrisshen93.github.io/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://chrisshen93.github.io/</loc>
     <lastmod>2018-07-14T08:58:12+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://47.98.147.69:1313/post/</loc>
+    <loc>https://chrisshen93.github.io/tags/note/</loc>
     <lastmod>2018-07-14T08:58:12+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://47.98.147.69:1313/tags/</loc>
+    <loc>https://chrisshen93.github.io/post/</loc>
+    <lastmod>2018-07-14T08:58:12+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://chrisshen93.github.io/tags/</loc>
     <lastmod>2018-07-14T08:58:12+08:00</lastmod>
     <priority>0</priority>
   </url>

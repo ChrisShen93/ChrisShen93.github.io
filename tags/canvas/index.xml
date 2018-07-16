@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Canvas on Chris&#39;s site</title>
-    <link>http://47.98.147.69:1313/tags/canvas/</link>
+    <link>https://chrisshen93.github.io/tags/canvas/</link>
     <description>Recent content in Canvas on Chris&#39;s site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 14 Jul 2018 08:58:12 +0800</lastBuildDate>
     
-	<atom:link href="http://47.98.147.69:1313/tags/canvas/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://chrisshen93.github.io/tags/canvas/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Canvas Note</title>
-      <link>http://47.98.147.69:1313/post/canvas-note/</link>
+      <link>https://chrisshen93.github.io/post/canvas-note/</link>
       <pubDate>Sat, 14 Jul 2018 08:58:12 +0800</pubDate>
       
-      <guid>http://47.98.147.69:1313/post/canvas-note/</guid>
+      <guid>https://chrisshen93.github.io/post/canvas-note/</guid>
       <description>Canvas Tutorial Canvas 是一个利用脚本来动态绘制图片及动画的 HTML 标签。
 Canvas 并不被一些老旧的浏览器支持。
 相关术语 Canvas interface element: 实现了规范定义的绘图方法和属性的元素，即 canvas 元素。
