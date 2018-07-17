@@ -2,32 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Chris&#39;s site</title>
-    <link>https://chrisshen93.github.io/post/</link>
+    <link>http://localhost:1313/post/</link>
     <description>Recent content in Posts on Chris&#39;s site</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>en</language>
+    <copyright>ChrisShen93</copyright>
     <lastBuildDate>Sat, 14 Jul 2018 08:58:12 +0800</lastBuildDate>
     
-	<atom:link href="https://chrisshen93.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Canvas Note</title>
-      <link>https://chrisshen93.github.io/post/canvas-note/</link>
+      <link>http://localhost:1313/post/canvas-note/</link>
       <pubDate>Sat, 14 Jul 2018 08:58:12 +0800</pubDate>
       
-      <guid>https://chrisshen93.github.io/post/canvas-note/</guid>
-      <description>Canvas Tutorial Canvas 是一个利用脚本来动态绘制图片及动画的 HTML 标签。
-Canvas 并不被一些老旧的浏览器支持。
-相关术语 Canvas interface element: 实现了规范定义的绘图方法和属性的元素，即 canvas 元素。
-Drawing context: 绘图上下文，一个左上角为 (0, 0) 的笛卡尔坐标平面，往右往下x、y分别增加。
-Immediate-mode: 立即模式，一种绘图模式。当绘图完成后，所有绘图结构将从内存中立即丢弃。canvas即为此种。
-Retained-mode: 残留模式，一种绘图模式。当绘图完成后，所有的绘图结构仍存在于内存中。DOM、SVG即为此种。
-Raster: 光栅风格，一种图形风格。由多行断开的图片（行）组成，每行都包含确定的像素个数。
-基础用法 &amp;lt;canvas id=&amp;quot;tutorial&amp;quot; width=&amp;quot;150&amp;quot; height=&amp;quot;150&amp;quot;&amp;gt;&amp;lt;/canvas&amp;gt;  Canvas 仅有width和height两个属性，默认值是 300px * 150px (width * height)。可以使用 CSS 来定义大小，但是在绘制时图形会伸缩以适应画布。若 CSS 定义的大小与 初始画布 大小比例不一致时，图形会呈现扭曲的状态。
- 当图形出现扭曲的状态时，可以尝试用 width 和 height 属性来明确定义 Canvas 的宽高，而不用 CSS。
- id 属性是用来方便标识、获取 canvas 画布的。canvas 也和常规的HTML一样拥有margin、border等样式属性。但是这些属性并不会影响到 canvas 画布中的内容。
-代替内容 &amp;lt;canvas id=&amp;quot;tutorial&amp;quot; width=&amp;quot;150&amp;quot; height=&amp;quot;150&amp;quot;&amp;gt; 您当前的浏览器不支持 canvas &amp;lt;/canvas&amp;gt;  Canvas 标签中的内容将会在不支持 canvas 的浏览器中被渲染。</description>
+      <guid>http://localhost:1313/post/canvas-note/</guid>
+      <description>Canvas Tutorial Canvas 是一个利用脚本来动态绘制图片及动画的 HTML 标签。 Canvas 并不被一些老旧的浏览器支持。 相关术语 Canvas interface element: 实现了规范定义的绘图方法和属性的元素，即 canvas 元素</description>
     </item>
     
   </channel>

@@ -1,50 +1,50 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<?xml-stylesheet type="text/xsl" href="https://chrisshen93.github.io/sitemap.xsl"?>
+<?xml-stylesheet type="text/xsl" href="http://localhost:1313/sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://chrisshen93.github.io/post/canvas-note/</loc>
+    <loc>http://localhost:1313/post/canvas-note/</loc>
     <lastmod>2018-07-14T08:58:12+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://chrisshen93.github.io/tags/canvas/</loc>
+    <loc>http://localhost:1313/tags/canvas/</loc>
     <lastmod>2018-07-14T08:58:12+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://chrisshen93.github.io/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://chrisshen93.github.io/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2018-07-14T08:58:12+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://chrisshen93.github.io/tags/note/</loc>
+    <loc>http://localhost:1313/tags/note/</loc>
     <lastmod>2018-07-14T08:58:12+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://chrisshen93.github.io/post/</loc>
+    <loc>http://localhost:1313/post/</loc>
     <lastmod>2018-07-14T08:58:12+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://chrisshen93.github.io/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2018-07-14T08:58:12+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
