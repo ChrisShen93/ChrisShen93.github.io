@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ChrisShen93</copyright>
-    <lastBuildDate>Sat, 14 Jul 2018 08:58:12 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 18 Jul 2018 15:43:48 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>SVG</title>
+      <link>http://localhost:1313/post/svg/</link>
+      <pubDate>Wed, 18 Jul 2018 15:43:48 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/svg/</guid>
+      <description>SVG 学习笔记 1. 一个最简单的例子 &amp;lt;svg version=&amp;quot;1.1&amp;quot; baseProfile=&amp;quot;full&amp;quot; width=&amp;quot;300&amp;quot; height=&amp;quot;200&amp;quot; xmlns=&amp;quot;http://www.w3.org/2000/svg&amp;quot;&amp;gt; &amp;lt;rect width=&amp;quot;100%&amp;quot; height=&amp;quot;100%&amp;quot; fill=&amp;quot;red&amp;quot;/&amp;gt; &amp;lt;/svg&amp;gt; 其中，xmlns必不可少。SVG是XML的一种方言，其命名空间由xmlns指定。 2. 理解 vi</description>
+    </item>
     
     <item>
       <title>Canvas Note</title>
@@ -19,6 +28,15 @@
       
       <guid>http://localhost:1313/post/canvas-note/</guid>
       <description>Canvas Tutorial Canvas 是一个利用脚本来动态绘制图片及动画的 HTML 标签。 Canvas 并不被一些老旧的浏览器支持。 相关术语 Canvas interface element: 实现了规范定义的绘图方法和属性的元素，即 canvas 元素</description>
+    </item>
+    
+    <item>
+      <title>随便说句话</title>
+      <link>http://localhost:1313/post/about/</link>
+      <pubDate>Tue, 03 Jul 2018 14:43:24 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/about/</guid>
+      <description>希望能一直保持好奇心。</description>
     </item>
     
   </channel>

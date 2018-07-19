@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>SVG - Chris&#39;s site</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="ChrisShen93" />
+  <meta name="description" content="SVG 学习笔记 1. 一个最简单的例子 &amp;lt;svg version=&amp;quot;1.1&amp;quot; baseProfile=&amp;quot;full&amp;quot; width=&amp;quot;300&amp;quot; height=&amp;quot;200&amp;quot; xmlns=&amp;quot;http://www.w3.org/2000/svg&amp;quot;&amp;gt; &amp;lt;rect width=&amp;quot;100%&amp;quot; height=&amp;quot;100%&amp;quot; fill=&amp;quot;red&amp;quot;/&amp;gt; &amp;lt;/svg&amp;gt; 其中，xmlns必不可少。SVG是XML的一种方言，其命名空间由xmlns指定。 2. 理解 vi" />
+
+  <meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.44" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/svg/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.2.0" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="SVG" />
+<meta property="og:description" content="SVG 学习笔记 1. 一个最简单的例子 &lt;svg version=&quot;1.1&quot; baseProfile=&quot;full&quot; width=&quot;300&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt; &lt;rect width=&quot;100%&quot; height=&quot;100%&quot; fill=&quot;red&quot;/&gt; &lt;/svg&gt; 其中，xmlns必不可少。SVG是XML的一种方言，其命名空间由xmlns指定。 2. 理解 vi" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/svg/" />
+
+
+
+<meta property="article:published_time" content="2018-07-18T15:43:48&#43;08:00"/>
+
+<meta property="article:modified_time" content="2018-07-18T15:43:48&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="SVG">
+<meta itemprop="description" content="SVG 学习笔记 1. 一个最简单的例子 &lt;svg version=&quot;1.1&quot; baseProfile=&quot;full&quot; width=&quot;300&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt; &lt;rect width=&quot;100%&quot; height=&quot;100%&quot; fill=&quot;red&quot;/&gt; &lt;/svg&gt; 其中，xmlns必不可少。SVG是XML的一种方言，其命名空间由xmlns指定。 2. 理解 vi">
+
+
+<meta itemprop="datePublished" content="2018-07-18T15:43:48&#43;08:00" />
+<meta itemprop="dateModified" content="2018-07-18T15:43:48&#43;08:00" />
+<meta itemprop="wordCount" content="562">
+
+
+
+<meta itemprop="keywords" content="note,svg," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="SVG"/>
+<meta name="twitter:description" content="SVG 学习笔记 1. 一个最简单的例子 &lt;svg version=&quot;1.1&quot; baseProfile=&quot;full&quot; width=&quot;300&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt; &lt;rect width=&quot;100%&quot; height=&quot;100%&quot; fill=&quot;red&quot;/&gt; &lt;/svg&gt; 其中，xmlns必不可少。SVG是XML的一种方言，其命名空间由xmlns指定。 2. 理解 vi"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">ChrisShen93</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">ChrisShen93</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">SVG</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2018-07-18 </span>
+        <div class="post-category">
+            
+              <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"> 学习笔记 </a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#svg-学习笔记">SVG 学习笔记</a>
+<ul>
+<li><a href="#1-一个最简单的例子">1. 一个最简单的例子</a></li>
+<li><a href="#2-理解-viewport-viewbox-preserveaspectratio">2. 理解 viewport，viewBox，preserveAspectRatio</a>
+<ul>
+<li><a href="#viewport">viewport</a></li>
+<li><a href="#viewbox">viewBox</a></li>
+<li><a href="#preserveaspectratio">preserveAspectRatio</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    
+
+    
+    <div class="post-content">
+      
+
+<h1 id="svg-学习笔记">SVG 学习笔记</h1>
+
+<h2 id="1-一个最简单的例子">1. 一个最简单的例子</h2>
+
+<pre><code class="language-xml">&lt;svg version=&quot;1.1&quot;
+     baseProfile=&quot;full&quot;
+     width=&quot;300&quot;
+     height=&quot;200&quot;
+     xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+  &lt;rect width=&quot;100%&quot; height=&quot;100%&quot; fill=&quot;red&quot;/&gt;
+&lt;/svg&gt;
+</code></pre>
+
+<p>其中，xmlns必不可少。SVG是XML的一种方言，其命名空间由xmlns指定。</p>
+
+<hr />
+
+<hr />
+
+<h2 id="2-理解-viewport-viewbox-preserveaspectratio">2. 理解 viewport，viewBox，preserveAspectRatio</h2>
+
+<h3 id="viewport">viewport</h3>
+
+<p>即 SVG 可见区域（画布）的大小。</p>
+
+<pre><code class="language-xml">&lt;svg width=&quot;200&quot;
+     height=&quot;200&quot;
+     viewBox=&quot;0 0 100 100&quot;
+     xmlns=&quot;http://www.w3.org/2000/svg&quot;
+&gt;&lt;/svg&gt;
+</code></pre>
+
+<p>上面的代码定义了一个视区，宽300单位，高200单位。</p>
+
+<p>width、height可以使用常见的CSS单位，包括em、px、px、pt、pc、cm等。</p>
+
+<hr />
+
+<h3 id="viewbox">viewBox</h3>
+
+<pre><code class="language-xml">&lt;svg width=&quot;400&quot;
+     height=&quot;300&quot;
+     viewBox=&quot;0, 0, 40, 30&quot;
+     style=&quot;border: 1px solid #cd0000;&quot;
+     &gt;
+    &lt;rect x=&quot;10&quot;
+          y=&quot;5&quot;
+          width=&quot;20&quot;
+          height=&quot;15&quot;
+          fill=&quot;#cd0000&quot;/&gt;
+&lt;/svg&gt;
+</code></pre>
+
+<p><svg width="400" height="300" viewBox="0, 0, 40, 30" style="border: 1px solid #cd0000;" > <rect x="10" y="5" width="20" height="15" fill="#cd0000"/></svg></p>
+
+<p>（图一）</p>
+
+<p><svg width="400" height="300" style="border: 1px solid #cd0000;" > <rect x="10" y="5" width="20" height="15" fill="#cd0000"/></svg></p>
+
+<p>（图二）</p>
+
+<p>按道理，SVG 画布大小为 400 * 300，而rect大小只有 40 * 30，仅为 1/400（见上图二），但实际看起来却是 1/4（见上图一）。之所以有这个差距，就是因为设置了 viewBox。</p>
+
+<p>viewBox 属性里需要设置四个值，分别是 左上角横坐标、左上角纵坐标、宽度、高度。</p>
+
+<p>viewBox 的作用为设置可视区，即用 <strong>选中的可视区</strong> 去铺满 <strong>整个SVG画布</strong>。</p>
+
+<hr />
+
+<h3 id="preserveaspectratio">preserveAspectRatio</h3>
+
+<p>preserveAspectRatio 属性作用于 viewBox，其值有两部分，先举个例子：</p>
+
+<pre><code class="language-xml">&lt;svg width=&quot;400&quot;
+     height=&quot;200&quot;
+     viewBox=&quot;0, 0, 200, 200&quot;
+     preserveAspectRatio=&quot;xMinYMin meet&quot;
+     style=&quot;border: 1px solid #cd0000;&quot;
+     &gt;
+    &lt;rect x=&quot;10&quot;
+          y=&quot;10&quot;
+          width=&quot;150&quot;
+          height=&quot;150&quot;
+          fill=&quot;#cd0000&quot;/&gt;
+&lt;/svg&gt;
+</code></pre>
+
+<p><svg width="400" height="200" viewBox="0, 0, 200, 200" preserveAspectRatio="xMinYMin meet" style="border: 1px solid #cd0000;" > <rect x="10" y="10" width="150" height="150" fill="#cd0000"/> </svg></p>
+
+<p>preserveAspectRatio 值的第一部分可以如下取值：</p>
+
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>含义</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>xMin</td>
+<td>viewPort 和 viewBox 左边对齐</td>
+</tr>
+
+<tr>
+<td>xMid</td>
+<td>viewPort 和 viewBox x轴中心对齐</td>
+</tr>
+
+<tr>
+<td>xMax</td>
+<td>viewPort 和 viewBox 右边对齐</td>
+</tr>
+
+<tr>
+<td>YMin</td>
+<td>viewPort 和 viewBox 上边缘对齐</td>
+</tr>
+
+<tr>
+<td>YMid</td>
+<td>viewPort 和 viewBox y轴中心点对齐</td>
+</tr>
+
+<tr>
+<td>YMax</td>
+<td>viewPort 和 viewBox 下边缘对齐</td>
+</tr>
+</tbody>
+</table>
+
+<p>preserveAspectRatio 值的第二部分可以如下取值：</p>
+
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>含义</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>meet</td>
+<td>保持纵横比缩放 viewBox 适应 viewport</td>
+</tr>
+
+<tr>
+<td>slice</td>
+<td>保持纵横比同时比例小的方向放大填满 viewport</td>
+</tr>
+
+<tr>
+<td>none</td>
+<td>扭曲纵横比充分适应 viewport</td>
+</tr>
+</tbody>
+</table>
+
+    </div>
+
+    
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">ChrisShen93</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">2018-07-18</span>
+  </p>
+  
+  
+</div>
+
+    
+    
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">Reward</label>
+  <div class="qr-code">
+    
+    
+      <label class="qr-code-image" for="reward">
+        <img class="image" src="/img/wechat-pay-qr.jpg">
+        <span>wechat</span>
+      </label>
+    
+      <label class="qr-code-image" for="reward">
+        <img class="image" src="/img/alipay-qr-code.jpg">
+        <span>alipay</span>
+      </label>
+  </div>
+</div>
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          
+          <a href="/tags/note/">note</a>
+          
+          <a href="/tags/svg/">svg</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+        
+          <a class="next" href="/post/canvas-note/">
+            <span class="next-text nav-default">Canvas Note</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:chrisshen93@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://stackoverflow.com/users/6319118/chrisshen93" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="https://plus.google.com/u/0/112506768534588906017" class="iconfont icon-google" title="google"></a>
+      <a href="https://github.com/ChrisShen93" class="iconfont icon-github" title="github"></a>
+      <a href="https://weibo.com/1932353950" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="https://www.zhihu.com/people/chrisshen93/activities" class="iconfont icon-zhihu" title="zhihu"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">ChrisShen93</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.2.0"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

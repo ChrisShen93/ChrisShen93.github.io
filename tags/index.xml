@@ -24,9 +24,18 @@
     <item>
       <title>Note</title>
       <link>http://localhost:1313/tags/note/</link>
-      <pubDate>Sat, 14 Jul 2018 08:58:12 +0800</pubDate>
+      <pubDate>Wed, 18 Jul 2018 15:43:48 +0800</pubDate>
       
       <guid>http://localhost:1313/tags/note/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Svg</title>
+      <link>http://localhost:1313/tags/svg/</link>
+      <pubDate>Wed, 18 Jul 2018 15:43:48 +0800</pubDate>
+      
+      <guid>http://localhost:1313/tags/svg/</guid>
       <description></description>
     </item>
     
