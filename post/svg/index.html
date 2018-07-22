@@ -76,7 +76,7 @@
 
 <meta itemprop="datePublished" content="2018-07-18T15:43:48&#43;08:00" />
 <meta itemprop="dateModified" content="2018-07-18T15:43:48&#43;08:00" />
-<meta itemprop="wordCount" content="2495">
+<meta itemprop="wordCount" content="3598">
 
 
 
@@ -192,6 +192,17 @@
 <li><a href="#贝塞尔曲线">贝塞尔曲线</a></li>
 <li><a href="#弧形">弧形</a></li>
 </ul></li>
+</ul></li>
+<li><a href="#5-填充和边框">5. 填充和边框</a>
+<ul>
+<li><a href="#上色">上色</a></li>
+<li><a href="#描边">描边</a></li>
+<li><a href="#使用css">使用CSS</a></li>
+</ul></li>
+<li><a href="#6-渐变">6. 渐变</a>
+<ul>
+<li><a href="#线性渐变">线性渐变</a></li>
+<li><a href="#径向渐变">径向渐变</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -745,6 +756,227 @@ a rx ry x-axis-rotation large-arc-flag sweep-flag dx dy
   &lt;text x=&quot;195&quot; y=&quot;210&quot;&gt;sweep-flag=1&lt;/text&gt;
 &lt;/svg&gt;
 </code></pre>
+
+<h2 id="5-填充和边框">5. 填充和边框</h2>
+
+<h3 id="上色">上色</h3>
+
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+<th>值</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>fill</td>
+<td>对象内部的填充色</td>
+<td>颜色名（像*red*这种）、rgb值（像rgb(255,0,0)这种）、十六进制值、rgba值，等。</td>
+</tr>
+
+<tr>
+<td>stroke</td>
+<td>对象的线条色</td>
+<td>同上</td>
+</tr>
+
+<tr>
+<td>fill-opacity</td>
+<td>对象内部填充色的透明度</td>
+<td>0～1。0为透明，1为完全不透明</td>
+</tr>
+
+<tr>
+<td>stroke-opacity</td>
+<td>对象线条色的透明度</td>
+<td>同上</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="描边">描边</h3>
+
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+<th>值</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>stroke-width</td>
+<td>描边的宽度</td>
+<td></td>
+</tr>
+
+<tr>
+<td>stroke-linecap</td>
+<td>描边终点的形状</td>
+<td>butt: 用直线结束线段<br/>square: 用直线结束线段，但是会超出实际路径。超出的宽度由stroke-width确定<br/>round: 用圆角结束线段。圆角的半径由stroke-width确定</td>
+</tr>
+
+<tr>
+<td>stroke-linejoin</td>
+<td>两条描边之间的连接方式</td>
+<td>miter:  用方形画笔在连接处形成尖角<br/>round:  用圆角连接，实现平滑效果<br/>bevel:  连接处会形成一个斜接</td>
+</tr>
+
+<tr>
+<td>stroke-dasharray</td>
+<td>虚线类型应用在描边上</td>
+<td></td>
+</tr>
+
+<tr>
+<td>fill-rule</td>
+<td>定义如何给图形重叠的区域上色</td>
+<td></td>
+</tr>
+
+<tr>
+<td>stroke-miterlimit</td>
+<td>定义什么情况下绘制或不绘制边框连接的<code>miter</code>效果</td>
+<td></td>
+</tr>
+
+<tr>
+<td>stroke-dashoffset</td>
+<td>定义虚线开始的位置</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="使用css">使用CSS</h3>
+
+<p>SVG 规范，将 SVG 的属性分为 <em>properties</em> 和 *attributes*。对于 <strong>properties</strong>，可以使用CSS达到与内联样式相同的效果；而对于 <strong>attributes</strong> 则不可以。<a href="https://www.w3.org/TR/SVG/propidx.html">SVG规范</a></p>
+
+<h2 id="6-渐变">6. 渐变</h2>
+
+<p>渐变分为线性渐变和径向渐变。渐变内容 <strong>必须</strong> 指定一个 <em>id</em> 属性，否则文档内的其他元素就不能引用它。</p>
+
+<p>为了让渐变能被重复使用，渐变内容需要定义在 <strong>&lt;defs&gt;</strong> 标签内部，而不是定义在形状上面。</p>
+
+<h3 id="线性渐变">线性渐变</h3>
+
+<p>线性渐变沿着直线改变颜色，要插入一个线性渐变，你需要在SVG文件的 <code>defs元素</code> 内部，创建一个<a href="https://developer.mozilla.org/zh-CN/docs/Web/SVG/Element/linearGradient">&lt;linearGradient&gt;</a> 节点。</p>
+
+<p><svg width="120" height="240" version="1.1" xmlns="http://www.w3.org/2000/svg">  <defs>      <linearGradient id="Gradient1">        <stop class="stop1" offset="0%"/>        <stop class="stop2" offset="50%"/>        <stop class="stop3" offset="100%"/>      </linearGradient>      <linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1">        <stop offset="0%" stop-color="red"/>        <stop offset="50%" stop-color="black" stop-opacity="0"/>        <stop offset="100%" stop-color="blue"/>      </linearGradient>      <style type="text/css">&lt;![CDATA[        #rect1 { fill: url(#Gradient1); }        .stop1 { stop-color: red; }        .stop2 { stop-color: black; stop-opacity: 0; }        .stop3 { stop-color: blue; }      ]]&gt;</style>  </defs>   <rect id="rect1" x="10" y="10" rx="15" ry="15" width="100" height="100"/>  <rect x="10" y="120" rx="15" ry="15" width="100" height="100" fill="url(#Gradient2)"/>  </svg></p>
+
+<style> #rect1 { fill: url(#Gradient1); } .stop1 { stop-color: red; } .stop2 { stop-color: black; stop-opacity: 0; } .stop3 { stop-color: blue; } </style>
+
+<pre><code class="language-xml">&lt;svg width=&quot;120&quot; height=&quot;240&quot; version=&quot;1.1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+  &lt;defs&gt;
+      &lt;linearGradient id=&quot;Gradient1&quot;&gt;
+        &lt;stop class=&quot;stop1&quot; offset=&quot;0%&quot;/&gt;
+        &lt;stop class=&quot;stop2&quot; offset=&quot;50%&quot;/&gt;
+        &lt;stop class=&quot;stop3&quot; offset=&quot;100%&quot;/&gt;
+      &lt;/linearGradient&gt;
+      &lt;linearGradient id=&quot;Gradient2&quot; x1=&quot;0&quot; x2=&quot;0&quot; y1=&quot;0&quot; y2=&quot;1&quot;&gt;
+        &lt;stop offset=&quot;0%&quot; stop-color=&quot;red&quot;/&gt;
+        &lt;stop offset=&quot;50%&quot; stop-color=&quot;black&quot; stop-opacity=&quot;0&quot;/&gt;
+        &lt;stop offset=&quot;100%&quot; stop-color=&quot;blue&quot;/&gt;
+      &lt;/linearGradient&gt;
+      &lt;style type=&quot;text/css&quot;&gt;&lt;![CDATA[
+        #rect1 { fill: url(#Gradient1); }
+        .stop1 { stop-color: red; }
+        .stop2 { stop-color: black; stop-opacity: 0; }
+        .stop3 { stop-color: blue; }
+      ]]&gt;&lt;/style&gt;
+  &lt;/defs&gt;
+  &lt;rect id=&quot;rect1&quot; x=&quot;10&quot; y=&quot;10&quot; rx=&quot;15&quot; ry=&quot;15&quot; width=&quot;100&quot; height=&quot;100&quot;/&gt;
+  &lt;rect x=&quot;10&quot; y=&quot;120&quot; rx=&quot;15&quot; ry=&quot;15&quot; width=&quot;100&quot; height=&quot;100&quot; fill=&quot;url(#Gradient2)&quot;/&gt;
+&lt;/svg&gt;
+</code></pre>
+
+<blockquote>
+<p>&lt;![CDATA[]]&gt; 中的内容不会被 XML 解析器解析。</p>
+</blockquote>
+
+<p>&lt;linearGradient&gt; 元素还需要一些其他的属性值，它们指定了渐变的大小和出现范围。渐变的方向可以通过两个点来控制，它们分别是属性x1、x2、y1和y2，这些属性定义了渐变路线走向。渐变色默认是水平方向的，但是通过修改这些属性，就可以旋转该方向。</p>
+
+<h3 id="径向渐变">径向渐变</h3>
+
+<p>径向渐变与线性渐变相似，只是它是从一个点开始发散绘制渐变。创建径向渐变需要在文档的<code>defs元素</code>中添加一个<a href="https://developer.mozilla.org/zh-CN/docs/Web/SVG/Element/radialGradient"><radialGradient></a>元素。</p>
+
+<p><svg width="120" height="240" version="1.1" xmlns="http://www.w3.org/2000/svg">  <defs>      <radialGradient id="RadialGradient1">        <stop offset="0%" stop-color="red"/>        <stop offset="100%" stop-color="blue"/>      </radialGradient>      <radialGradient id="RadialGradient2" cx="0.25" cy="0.25" r="0.25">        <stop offset="0%" stop-color="red"/>        <stop offset="100%" stop-color="blue"/>      </radialGradient>  </defs>   <rect x="10" y="10" rx="15" ry="15" width="100" height="100" fill="url(#RadialGradient1)"/>   <rect x="10" y="120" rx="15" ry="15" width="100" height="100" fill="url(#RadialGradient2)"/>   </svg></p>
+
+<pre><code class="language-xml">&lt;svg width=&quot;120&quot; height=&quot;240&quot; version=&quot;1.1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+  &lt;defs&gt;
+      &lt;radialGradient id=&quot;RadialGradient1&quot;&gt;
+        &lt;stop offset=&quot;0%&quot; stop-color=&quot;red&quot;/&gt;
+        &lt;stop offset=&quot;100%&quot; stop-color=&quot;blue&quot;/&gt;
+      &lt;/radialGradient&gt;
+      &lt;radialGradient id=&quot;RadialGradient2&quot; cx=&quot;0.25&quot; cy=&quot;0.25&quot; r=&quot;0.25&quot;&gt;
+        &lt;stop offset=&quot;0%&quot; stop-color=&quot;red&quot;/&gt;
+        &lt;stop offset=&quot;100%&quot; stop-color=&quot;blue&quot;/&gt;
+      &lt;/radialGradient&gt;
+  &lt;/defs&gt;
+ 
+  &lt;rect x=&quot;10&quot; y=&quot;10&quot; rx=&quot;15&quot; ry=&quot;15&quot; width=&quot;100&quot; height=&quot;100&quot;
+        fill=&quot;url(#RadialGradient1)&quot;/&gt; 
+  &lt;rect x=&quot;10&quot; y=&quot;120&quot; rx=&quot;15&quot; ry=&quot;15&quot; width=&quot;100&quot; height=&quot;100&quot;
+        fill=&quot;url(#RadialGradient2)&quot;/&gt; 
+&lt;/svg&gt;
+</code></pre>
+
+<p>&lt;radialGradient&gt; 的几个特殊属性：</p>
+
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+<th>值</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>cx</td>
+<td>渐变结束所围绕的圆环的中心点</td>
+<td>数字或百分比，默认为50%</td>
+</tr>
+
+<tr>
+<td>cy</td>
+<td>渐变结束所围绕的圆环的中心点</td>
+<td>数字或百分比，默认为50%</td>
+</tr>
+
+<tr>
+<td>r</td>
+<td>渐变结束所围绕的圆环的半径</td>
+<td>默认为50%</td>
+</tr>
+
+<tr>
+<td>fx</td>
+<td>渐变的焦点</td>
+<td>默认为0%</td>
+</tr>
+
+<tr>
+<td>fy</td>
+<td>渐变的焦点</td>
+<td>默认为0%</td>
+</tr>
+
+<tr>
+<td>spreadMethod</td>
+<td>用于描述渐变过程</td>
+<td>pad/refleact/repeat</td>
+</tr>
+</tbody>
+</table>
+
+<p>关于渐变，建议了解 <strong><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/gradientUnits">gradientUnits</a></strong>，其值有两个 <em>userSpaceOnUse</em> 和 <em>objectBoundingBox</em> (默认)。</p>
 
     </div>
 
