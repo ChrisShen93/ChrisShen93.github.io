@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ChrisShen93</copyright>
-    <lastBuildDate>Wed, 18 Jul 2018 15:43:48 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 25 Jul 2018 08:57:10 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>JSX in Vue</title>
+      <link>http://localhost:1313/post/vue-jsx/</link>
+      <pubDate>Wed, 25 Jul 2018 08:57:10 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/vue-jsx/</guid>
+      <description>使用 JSX Vue 的 template 书写起来很方便，但是对于 Vue 2.5.0 之前的版本来说，想使用 functional(stateless) 组件，就需要放弃使用 template，而去使用 render 方法（）。 &amp;lt;template&amp;gt; &amp;lt;div&amp;gt; {{ msg }} &amp;lt;/div&amp;gt; &amp;lt;/template&amp;gt; &amp;lt;script&amp;gt; export</description>
+    </item>
     
     <item>
       <title>SVG</title>

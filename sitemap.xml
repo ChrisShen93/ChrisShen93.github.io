@@ -3,6 +3,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://localhost:1313/post/vue-jsx/</loc>
+    <lastmod>2018-07-25T08:57:10+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://localhost:1313/post/svg/</loc>
     <lastmod>2018-07-18T15:43:48+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -38,7 +45,7 @@
   
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2018-07-18T15:43:48+08:00</lastmod>
+    <lastmod>2018-07-25T08:57:10+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -52,7 +59,7 @@
   
   <url>
     <loc>http://localhost:1313/post/</loc>
-    <lastmod>2018-07-18T15:43:48+08:00</lastmod>
+    <lastmod>2018-07-25T08:57:10+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
