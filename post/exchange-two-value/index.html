@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>JSX in Vue - Chris&#39;s site</title>
+  <title>JavaScript中交换两个变量值的常见方法及性能比较 - Chris&#39;s site</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,10 +16,9 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="ChrisShen93" />
-  <meta name="description" content="使用 JSX Vue 的 template 书写起来很方便，但是对于 Vue 2.5.0 之前的版本来说，想使用 functional(stateless) 组件，就需要放弃使用 template，而去使用 render 方法（）。 &amp;lt;template&amp;gt; &amp;lt;div&amp;gt; {{ msg }} &amp;lt;/div&amp;gt; &amp;lt;/template&amp;gt; &amp;lt;script&amp;gt; export" />
+<meta name="author" content="ChrisShen93" /><meta name="description" content="JavaScript中交换两个变量值的常见方法及性能比较。" />
+<meta name="keywords" content="JavsScript, 交换变量" />
 
-  <meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -29,7 +28,7 @@
 <meta name="generator" content="Hugo 0.44" />
 
 
-<link rel="canonical" href="http://localhost:1313/post/vue-jsx/" />
+<link rel="canonical" href="http://localhost:1313/post/exchange-two-value/" />
 
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -49,20 +48,16 @@
 
 
 
-<meta property="og:title" content="JSX in Vue" />
-<meta property="og:description" content="使用 JSX Vue 的 template 书写起来很方便，但是对于 Vue 2.5.0 之前的版本来说，想使用 functional(stateless) 组件，就需要放弃使用 template，而去使用 render 方法（）。 &lt;template&gt; &lt;div&gt; {{ msg }} &lt;/div&gt; &lt;/template&gt; &lt;script&gt; export" />
+<meta property="og:title" content="JavaScript中交换两个变量值的常见方法及性能比较" />
+<meta property="og:description" content="JavaScript中交换两个变量值的常见方法及性能比较。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/post/vue-jsx/" />
+<meta property="og:url" content="http://localhost:1313/post/exchange-two-value/" />
 
 
 
-<meta property="article:published_time" content="2018-07-25T08:57:10&#43;08:00"/>
+<meta property="article:published_time" content="2018-07-28T21:09:03&#43;08:00"/>
 
-<meta property="article:modified_time" content="2018-07-25T08:57:10&#43;08:00"/>
-
-
-
-
+<meta property="article:modified_time" content="2018-07-28T21:09:03&#43;08:00"/>
 
 
 
@@ -70,20 +65,24 @@
 
 
 
-<meta itemprop="name" content="JSX in Vue">
-<meta itemprop="description" content="使用 JSX Vue 的 template 书写起来很方便，但是对于 Vue 2.5.0 之前的版本来说，想使用 functional(stateless) 组件，就需要放弃使用 template，而去使用 render 方法（）。 &lt;template&gt; &lt;div&gt; {{ msg }} &lt;/div&gt; &lt;/template&gt; &lt;script&gt; export">
-
-
-<meta itemprop="datePublished" content="2018-07-25T08:57:10&#43;08:00" />
-<meta itemprop="dateModified" content="2018-07-25T08:57:10&#43;08:00" />
-<meta itemprop="wordCount" content="564">
 
 
 
-<meta itemprop="keywords" content="" />
+
+<meta itemprop="name" content="JavaScript中交换两个变量值的常见方法及性能比较">
+<meta itemprop="description" content="JavaScript中交换两个变量值的常见方法及性能比较。">
+
+
+<meta itemprop="datePublished" content="2018-07-28T21:09:03&#43;08:00" />
+<meta itemprop="dateModified" content="2018-07-28T21:09:03&#43;08:00" />
+<meta itemprop="wordCount" content="447">
+
+
+
+<meta itemprop="keywords" content="JavaScript," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="JSX in Vue"/>
-<meta name="twitter:description" content="使用 JSX Vue 的 template 书写起来很方便，但是对于 Vue 2.5.0 之前的版本来说，想使用 functional(stateless) 组件，就需要放弃使用 template，而去使用 render 方法（）。 &lt;template&gt; &lt;div&gt; {{ msg }} &lt;/div&gt; &lt;/template&gt; &lt;script&gt; export"/>
+<meta name="twitter:title" content="JavaScript中交换两个变量值的常见方法及性能比较"/>
+<meta name="twitter:description" content="JavaScript中交换两个变量值的常见方法及性能比较。"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -146,11 +145,15 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">JSX in Vue</h1>
+      <h1 class="post-title">JavaScript中交换两个变量值的常见方法及性能比较</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2018-07-25 </span>
-        
+        <span class="post-time"> 2018-07-28 </span>
+        <div class="post-category">
+            
+              <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"> 学习笔记 </a>
+            
+          </div>
         
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> times read </span>
       </div>
@@ -166,8 +169,15 @@
 <ul>
 <li>
 <ul>
-<li><a href="#使用-jsx">使用 JSX</a></li>
-<li><a href="#在-jsx-中使用-template-scope-scopedslots">在 JSX 中使用 template scope (scopedSlots)</a></li>
+<li><a href="#法一">法一</a></li>
+<li><a href="#法二">法二</a>
+<ul>
+<li><a href="#法三">法三</a></li>
+</ul></li>
+<li><a href="#法四">法四</a></li>
+<li><a href="#法五">法五</a></li>
+<li><a href="#法六">法六</a></li>
+<li><a href="#性能对比">性能对比</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -181,136 +191,216 @@
     <div class="post-content">
       
 
-<h2 id="使用-jsx">使用 JSX</h2>
+<p>在 JavaScript 中交换两个变量值，一般有以下几种方法：</p>
 
-<p>Vue 的 template 书写起来很方便，但是对于 <strong>Vue 2.5.0</strong> 之前的版本来说，想使用 <code>functional(stateless) 组件</code>，就需要放弃使用 template，而去使用 <code>render</code> 方法（）。</p>
+<h2 id="法一">法一</h2>
 
-<pre><code class="language-html">&lt;template&gt;
-  &lt;div&gt;
-    {{ msg }}
-  &lt;/div&gt;
-&lt;/template&gt;
+<p>利用一个临时变量</p>
 
-&lt;script&gt;
-export default {
-  data () {
-    return {
-      msg: 'hello'
-    }
-  }
- }
-&lt;/script&gt;
-</code></pre>
-
-<p>上面这段在 vue-loader 处理之后的结果是：</p>
-
-<pre><code class="language-js">export default {
-  data () {
-    return {
-      msg: 'hello'
-    }
-  },
-  render () {
-    var _vm = this;
-    var _h = _vm.$createElement;
-    var _c = _vm._self_.c || _h;
-    return _c('div', [
-      _vm._v(_vm._s(_vm.msg)),
-      _c('div')
-    ])
-  }
+<pre><code class="language-javascript">function exchange0 (a, b) {
+  let tmp = a;
+  a = b;
+  b = tmp;
 }
 </code></pre>
 
-<p>此处的 <strong><code>createElement</code></strong> 函数即平时所说的 <strong><code>h</code></strong> 函数，Vue 用它来创建一个 VNode。同时，<code>createElement</code> 也是 <code>render</code> 函数的第一个参数。</p>
+<p>优点：最简单易懂的方式，适用一切情况，性能高。</p>
 
-<p>在 render 中写 JSX：</p>
+<p>缺点：需要使用临时变量。</p>
 
-<pre><code class="language-jsx">export default {
-  data () {
-    return {
-      msg: 'hello'
-    }
-  },
-  render () {
-    return (
-      &lt;div&gt;{ this.msg }&lt;/div&gt;
-    )
-  }
+<h2 id="法二">法二</h2>
+
+<p>通过和差运算</p>
+
+<pre><code class="language-javascript">function exchange1 (a, b) {
+  a += b;
+  b = a - b;
+  a -= b;
 }
 </code></pre>
 
-<p>会被转换成：</p>
+<p>优点：不需使用临时变量。</p>
 
-<pre><code class="language-js">export default {
-  data () {
-    return {
-      msg: 'hello'
-    }
-  },
-  render () {
-    const h = arguments[0]
-    return h(
-    	'div',
-      null,
-      [this.msg]
-    )
-  }
+<p>缺点：仅适用于数字类型的交换。</p>
+
+<h3 id="法三">法三</h3>
+
+<p>通过位运算</p>
+
+<pre><code class="language-javascript">function exchange2 (a, b) {
+  a ^= b;
+  b ^= a;
+  a ^= b;
 }
 </code></pre>
+
+<p>优点：利用位运算，速度快。</p>
+
+<p>缺点：仅适用于数字类型的交换。</p>
+
+<h2 id="法四">法四</h2>
+
+<p>借助对象</p>
+
+<pre><code class="language-javascript">function exchange3 (a, b) {
+  a = {a:b, b:a};
+  b = a.b;
+  a = a.a;
+}
+</code></pre>
+
+<p>优点：适用于所有类型。</p>
+
+<h2 id="法五">法五</h2>
+
+<p>借助数组</p>
+
+<pre><code class="language-javascript">function exchange4 (a, b) {
+  a = [a, b];
+  b = a[0];
+  a = a[1];
+}
+
+// 下面是简写形式
+function exchange5 (a, b) {
+  a = [b, b = a][0];
+}
+</code></pre>
+
+<p>优点：适用于所有类型。</p>
+
+<p>缺点：性能似乎有些欠缺。</p>
+
+<h2 id="法六">法六</h2>
+
+<p>利用ES6的解构赋值</p>
+
+<pre><code class="language-javascript">function exchange6 (a, b) {
+  [a, b] = [b, a];
+}
+</code></pre>
+
+<p>优点：适用于所有类型。</p>
+
+<h2 id="性能对比">性能对比</h2>
+
+<p>测试环境：</p>
 
 <blockquote>
-<p>在 render 中可以直接使用 createElement 方法。但是如果需要使用 JSX 语法的话，则需要加入 <code>babel-plugin-transform-vue-jsx</code>、<code>babel-plugin-syntax-jsx</code>、<code>babel-helper-vue-jsx-merge-props</code>、<code>babel-preset-env</code>，这四个 babel 插件。</p>
+<p>操作系统：macOS 10.13.6</p>
+
+<p>内存大小：16GB</p>
+
+<p>NODE版本：v9.11.2</p>
 </blockquote>
 
-<h2 id="在-jsx-中使用-template-scope-scopedslots">在 JSX 中使用 template scope (scopedSlots)</h2>
+<p>测试用例1：</p>
 
-<p>在 <strong>&lt;template/&gt;</strong> 使用 template scope(从2.5.0开始是scopedSlots)，是一件很轻松又随意的事情：</p>
-
-<pre><code class="language-xml">&lt;!-- version &lt; 2.5.0 --&gt;
-&lt;my-components&gt;
-  &lt;template scope=&quot;scope&quot;&gt;&lt;/template&gt;
-&lt;/my-components&gt;
-
-&lt;!-- version &gt;= 2.5.0 --&gt;
-&lt;my-components&gt;
-  &lt;template slot-scope=&quot;scope&quot;&gt;&lt;/template&gt;
-&lt;/my-components&gt;
+<pre><code class="language-javascript">let a = 1;
+let b = 2;
 </code></pre>
 
-<p>而在 JSX 中使用，就稍微麻烦一些：</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>执行次数</th>
+<th>耗时(ms)</th>
+</tr>
+</thead>
 
-<pre><code class="language-jsx">export default {
-  render () {
-    return (
-      &lt;my-components scopeSlots={
-        {
-          default: function (scope) {
-            return [&lt;div&gt;{ scope.text }&lt;/div&gt;, &lt;div&gt;This is the real body&lt;/div&gt;]
-          }
-        }
-      }/&gt;
-    )
-  }
-}
+<tbody>
+<tr>
+<td>exchange0</td>
+<td>1e9</td>
+<td>840~888</td>
+</tr>
 
-// 如果是 default scope，那么也可以直接简写
-export default {
-  render () {
-    return (
-      &lt;my-components&gt;
-      {
-        scope =&gt; (
-          &lt;div&gt;
-            { scope.text }
-          &lt;/div&gt;
-        )
-      }
-      &lt;/my-components&gt;
-    )
-  }
-}
+<tr>
+<td>exchange1</td>
+<td>1e9</td>
+<td>836~844</td>
+</tr>
+
+<tr>
+<td>exchange2</td>
+<td>1e9</td>
+<td>836~846</td>
+</tr>
+
+<tr>
+<td>exchange3</td>
+<td>1e9</td>
+<td>840~848</td>
+</tr>
+
+<tr>
+<td>exchange4</td>
+<td>1e9</td>
+<td>843~847</td>
+</tr>
+
+<tr>
+<td>exchange5</td>
+<td>1e9</td>
+<td>835~849</td>
+</tr>
+
+<tr>
+<td>exchange6</td>
+<td>1e9</td>
+<td>7235~7936</td>
+</tr>
+</tbody>
+</table>
+
+<p>测试用例2：</p>
+
+<pre><code class="language-javascript">let c = 'c';
+let d = 'd';
 </code></pre>
+
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>执行次数</th>
+<th>耗时(ms)</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>exchange0</td>
+<td>1e9</td>
+<td>822~865</td>
+</tr>
+
+<tr>
+<td>exchange3</td>
+<td>1e9</td>
+<td>807~839</td>
+</tr>
+
+<tr>
+<td>exchange4</td>
+<td>1e9</td>
+<td>810~869</td>
+</tr>
+
+<tr>
+<td>exchange5</td>
+<td>1e9</td>
+<td>808~841</td>
+</tr>
+
+<tr>
+<td>exchange6</td>
+<td>1e9</td>
+<td>7120~7508</td>
+</tr>
+</tbody>
+</table>
 
     </div>
 
@@ -322,7 +412,7 @@ export default {
   </p>
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
-    <span class="item-content">2018-07-25</span>
+    <span class="item-content">2018-07-28</span>
   </p>
   
   
@@ -349,19 +439,18 @@ export default {
 </div>
 
     <footer class="post-footer">
-      
+      <div class="post-tags">
+          
+          <a href="/tags/javascript/">JavaScript</a>
+          
+        </div>
 
       
       <nav class="post-nav">
         
-          <a class="prev" href="/post/exchange-two-value/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">JavaScript中交换两个变量值的常见方法及性能比较</span>
-            <span class="prev-text nav-mobile">Prev</span>
-          </a>
         
-          <a class="next" href="/post/svg/">
-            <span class="next-text nav-default">SVG</span>
+          <a class="next" href="/post/vue-jsx/">
+            <span class="next-text nav-default">JSX in Vue</span>
             <span class="next-text nav-mobile">Next</span>
             <i class="iconfont icon-right"></i>
           </a>
@@ -390,8 +479,8 @@ export default {
     <script src="/lib/gitalk/gitalk-1.2.2.min.js"></script>
   <script type="text/javascript">
   var gitalk = new Gitalk({
-    id: '2018-07-25 08:57:10 \x2b0800 CST',
-    title: 'JSX in Vue',
+    id: '2018-07-28 21:09:03 \x2b0800 CST',
+    title: 'JavaScript中交换两个变量值的常见方法及性能比较',
     clientID: 'f341468b87f1db91a623',
     clientSecret: 'fe4d5bed8858412750ebfe64cdabe3c67d53ca94',
     repo: 'site-hugo',

@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ChrisShen93</copyright>
-    <lastBuildDate>Wed, 25 Jul 2018 08:57:10 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 28 Jul 2018 21:09:03 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>JavaScript中交换两个变量值的常见方法及性能比较</title>
+      <link>http://localhost:1313/post/exchange-two-value/</link>
+      <pubDate>Sat, 28 Jul 2018 21:09:03 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/exchange-two-value/</guid>
+      <description>在 JavaScript 中交换两个变量值，一般有以下几种方法： 法一 利用一个临时变量 function exchange0 (a, b) { let tmp = a; a = b; b = tmp; } 优点：最简单易懂的方式，适用一切情况，性能高。</description>
+    </item>
     
     <item>
       <title>JSX in Vue</title>
