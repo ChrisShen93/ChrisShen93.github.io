@@ -22,7 +22,7 @@
     </item>
     
     <item>
-      <title>JSX in Vue</title>
+      <title>在 Vue 中使用 JSX 的一些注意事项</title>
       <link>http://localhost:1313/post/vue-jsx/</link>
       <pubDate>Wed, 25 Jul 2018 08:57:10 +0800</pubDate>
       
@@ -31,7 +31,7 @@
     </item>
     
     <item>
-      <title>SVG</title>
+      <title>SVG 入门教程</title>
       <link>http://localhost:1313/post/svg/</link>
       <pubDate>Wed, 18 Jul 2018 15:43:48 +0800</pubDate>
       
@@ -40,7 +40,7 @@
     </item>
     
     <item>
-      <title>Canvas Note</title>
+      <title>Canvas 的个人学习笔记</title>
       <link>http://localhost:1313/post/canvas-note/</link>
       <pubDate>Sat, 14 Jul 2018 08:58:12 +0800</pubDate>
       
