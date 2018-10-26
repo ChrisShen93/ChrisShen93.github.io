@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ChrisShen93</copyright>
-    <lastBuildDate>Sat, 28 Jul 2018 21:09:03 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 26 Oct 2018 09:23:24 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Git Unlink of File</title>
+      <link>http://localhost:1313/post/git-unlink-of-file/</link>
+      <pubDate>Fri, 26 Oct 2018 09:23:24 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/git-unlink-of-file/</guid>
+      <description>每天到公司打开电脑的第一件事，是拉取同事的最新代码： git pull 然而今天却出了点问题（Windows下），git pull 没有成功，提示如下： Unlink of file &amp;lsquo;.git/objects/pack/pack-****.pack&amp;rsquo; failed. Should I</description>
+    </item>
     
     <item>
       <title>JavaScript中交换两个变量值的常见方法及性能比较</title>

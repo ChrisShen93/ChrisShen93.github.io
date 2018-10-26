@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>在 Vue 中使用 JSX 的一些注意事项 - Chris&#39;s site</title>
+  <title>Git Unlink of File - Chris&#39;s site</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,9 +16,10 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="ChrisShen93" /><meta name="description" content="在 Vue 中使用 JSX 的一些注意事项" />
-<meta name="keywords" content="Vue, JSX" />
+<meta name="author" content="ChrisShen93" />
+  <meta name="description" content="每天到公司打开电脑的第一件事，是拉取同事的最新代码： git pull 然而今天却出了点问题（Windows下），git pull 没有成功，提示如下： Unlink of file &amp;lsquo;.git/objects/pack/pack-****.pack&amp;rsquo; failed. Should I" />
 
+  <meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -28,7 +29,7 @@
 <meta name="generator" content="Hugo 0.44" />
 
 
-<link rel="canonical" href="http://localhost:1313/post/vue-jsx/" />
+<link rel="canonical" href="http://localhost:1313/post/git-unlink-of-file/" />
 
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -48,20 +49,16 @@
 
 
 
-<meta property="og:title" content="在 Vue 中使用 JSX 的一些注意事项" />
-<meta property="og:description" content="在 Vue 中使用 JSX 的一些注意事项" />
+<meta property="og:title" content="Git Unlink of File" />
+<meta property="og:description" content="每天到公司打开电脑的第一件事，是拉取同事的最新代码： git pull 然而今天却出了点问题（Windows下），git pull 没有成功，提示如下： Unlink of file &lsquo;.git/objects/pack/pack-****.pack&rsquo; failed. Should I" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/post/vue-jsx/" />
+<meta property="og:url" content="http://localhost:1313/post/git-unlink-of-file/" />
 
 
 
-<meta property="article:published_time" content="2018-07-25T08:57:10&#43;08:00"/>
+<meta property="article:published_time" content="2018-10-26T09:23:24&#43;08:00"/>
 
-<meta property="article:modified_time" content="2018-07-25T08:57:10&#43;08:00"/>
-
-
-
-
+<meta property="article:modified_time" content="2018-10-26T09:23:24&#43;08:00"/>
 
 
 
@@ -69,20 +66,24 @@
 
 
 
-<meta itemprop="name" content="在 Vue 中使用 JSX 的一些注意事项">
-<meta itemprop="description" content="在 Vue 中使用 JSX 的一些注意事项">
 
 
-<meta itemprop="datePublished" content="2018-07-25T08:57:10&#43;08:00" />
-<meta itemprop="dateModified" content="2018-07-25T08:57:10&#43;08:00" />
-<meta itemprop="wordCount" content="564">
+
+
+<meta itemprop="name" content="Git Unlink of File">
+<meta itemprop="description" content="每天到公司打开电脑的第一件事，是拉取同事的最新代码： git pull 然而今天却出了点问题（Windows下），git pull 没有成功，提示如下： Unlink of file &lsquo;.git/objects/pack/pack-****.pack&rsquo; failed. Should I">
+
+
+<meta itemprop="datePublished" content="2018-10-26T09:23:24&#43;08:00" />
+<meta itemprop="dateModified" content="2018-10-26T09:23:24&#43;08:00" />
+<meta itemprop="wordCount" content="318">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="在 Vue 中使用 JSX 的一些注意事项"/>
-<meta name="twitter:description" content="在 Vue 中使用 JSX 的一些注意事项"/>
+<meta name="twitter:title" content="Git Unlink of File"/>
+<meta name="twitter:description" content="每天到公司打开电脑的第一件事，是拉取同事的最新代码： git pull 然而今天却出了点问题（Windows下），git pull 没有成功，提示如下： Unlink of file &lsquo;.git/objects/pack/pack-****.pack&rsquo; failed. Should I"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -145,10 +146,10 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">在 Vue 中使用 JSX 的一些注意事项</h1>
+      <h1 class="post-title">Git Unlink of File</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2018-07-25 </span>
+        <span class="post-time"> 2018-10-26 </span>
         
         
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> times read </span>
@@ -161,15 +162,7 @@
   <h2 class="post-toc-title">Contents</h2>
   
   <div class="post-toc-content always-active">
-    <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#使用-jsx">使用 JSX</a></li>
-<li><a href="#在-jsx-中使用-template-scope-scopedslots">在 JSX 中使用 template scope (scopedSlots)</a></li>
-</ul></li>
-</ul>
-</nav>
+    
   </div>
 </div>
 
@@ -178,138 +171,35 @@
 
     
     <div class="post-content">
-      
+      <p>每天到公司打开电脑的第一件事，是拉取同事的最新代码：</p>
 
-<h2 id="使用-jsx">使用 JSX</h2>
-
-<p>Vue 的 template 书写起来很方便，但是对于 <strong>Vue 2.5.0</strong> 之前的版本来说，想使用 <code>functional(stateless) 组件</code>，就需要放弃使用 template，而去使用 <code>render</code> 方法（）。</p>
-
-<pre><code class="language-html">&lt;template&gt;
-  &lt;div&gt;
-    {{ msg }}
-  &lt;/div&gt;
-&lt;/template&gt;
-
-&lt;script&gt;
-export default {
-  data () {
-    return {
-      msg: 'hello'
-    }
-  }
- }
-&lt;/script&gt;
+<pre><code class="language-shell">git pull
 </code></pre>
 
-<p>上面这段在 vue-loader 处理之后的结果是：</p>
-
-<pre><code class="language-js">export default {
-  data () {
-    return {
-      msg: 'hello'
-    }
-  },
-  render () {
-    var _vm = this;
-    var _h = _vm.$createElement;
-    var _c = _vm._self_.c || _h;
-    return _c('div', [
-      _vm._v(_vm._s(_vm.msg)),
-      _c('div')
-    ])
-  }
-}
-</code></pre>
-
-<p>此处的 <strong><code>createElement</code></strong> 函数即平时所说的 <strong><code>h</code></strong> 函数，Vue 用它来创建一个 VNode。同时，<code>createElement</code> 也是 <code>render</code> 函数的第一个参数。</p>
-
-<p>在 render 中写 JSX：</p>
-
-<pre><code class="language-jsx">export default {
-  data () {
-    return {
-      msg: 'hello'
-    }
-  },
-  render () {
-    return (
-      &lt;div&gt;{ this.msg }&lt;/div&gt;
-    )
-  }
-}
-</code></pre>
-
-<p>会被转换成：</p>
-
-<pre><code class="language-js">export default {
-  data () {
-    return {
-      msg: 'hello'
-    }
-  },
-  render () {
-    const h = arguments[0]
-    return h(
-    	'div',
-      null,
-      [this.msg]
-    )
-  }
-}
-</code></pre>
+<p>然而今天却出了点问题（Windows下），git pull 没有成功，提示如下：</p>
 
 <blockquote>
-<p>在 render 中可以直接使用 createElement 方法。但是如果需要使用 JSX 语法的话，则需要加入 <code>babel-plugin-transform-vue-jsx</code>、<code>babel-plugin-syntax-jsx</code>、<code>babel-helper-vue-jsx-merge-props</code>、<code>babel-preset-env</code>，这四个 babel 插件。</p>
+<p>Unlink of file &lsquo;.git/objects/pack/pack-****.pack&rsquo; failed. Should I try again? (y/n)</p>
 </blockquote>
 
-<h2 id="在-jsx-中使用-template-scope-scopedslots">在 JSX 中使用 template scope (scopedSlots)</h2>
+<p>在 stackoverflow 上搜到相关问题，说是因为有其他程序占用了文件。可以设置 git 的一个新的环境变量 <code>GIT_ASK_YESNO</code> 来避免 Windows 上出现 <code>unlink</code> <code>rename</code> <code>rmdir</code> 后出现的类似问题。</p>
 
-<p>在 <strong>&lt;template/&gt;</strong> 使用 template scope(从2.5.0开始是scopedSlots)，是一件很轻松又随意的事情：</p>
+<p>由于不知道设置该变量后会采用 yes 还是 no，因此采取了万（wu）能（chi）的 重启/注销 大法。然而问题依旧。</p>
 
-<pre><code class="language-xml">&lt;!-- version &lt; 2.5.0 --&gt;
-&lt;my-components&gt;
-  &lt;template scope=&quot;scope&quot;&gt;&lt;/template&gt;
-&lt;/my-components&gt;
+<p>最后使用了下面两行命令解决：</p>
 
-&lt;!-- version &gt;= 2.5.0 --&gt;
-&lt;my-components&gt;
-  &lt;template slot-scope=&quot;scope&quot;&gt;&lt;/template&gt;
-&lt;/my-components&gt;
+<pre><code class="language-shell">git gc --auto
+git repack -d -l
 </code></pre>
 
-<p>而在 JSX 中使用，就稍微麻烦一些：</p>
+<p>上面的两行代码在 git 文档中有解释</p>
 
-<pre><code class="language-jsx">export default {
-  render () {
-    return (
-      &lt;my-components scopedSlots={
-        {
-          default: function (scope) {
-            return [&lt;div&gt;{ scope.text }&lt;/div&gt;, &lt;div&gt;This is the real body&lt;/div&gt;]
-          }
-        }
-      }/&gt;
-    )
-  }
-}
+<blockquote>
+<p>With this option, git gc checks whether any housekeeping is required; if not, it exits without performing any work. Some git commands run git gc &ndash;auto after performing operations that could create many loose objects. Housekeeping is required if there are too many loose objects or too many packs in the repository.
+If the number of loose objects exceeds the value of the gc.auto configuration variable, then all loose objects are combined into a single pack using git repack -d -l. Setting the value of gc.auto to 0 disables automatic packing of loose objects.</p>
+</blockquote>
 
-// 如果是 default scope，那么也可以直接简写
-export default {
-  render () {
-    return (
-      &lt;my-components&gt;
-      {
-        scope =&gt; (
-          &lt;div&gt;
-            { scope.text }
-          &lt;/div&gt;
-        )
-      }
-      &lt;/my-components&gt;
-    )
-  }
-}
-</code></pre>
+<p><a href="https://git-scm.com/docs/git-gc#git-gc---auto">原文地址</a></p>
 
     </div>
 
@@ -321,7 +211,7 @@ export default {
   </p>
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
-    <span class="item-content">2018-07-25</span>
+    <span class="item-content">2018-10-26</span>
   </p>
   
   
@@ -353,14 +243,9 @@ export default {
       
       <nav class="post-nav">
         
-          <a class="prev" href="/post/exchange-two-value/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">JavaScript中交换两个变量值的常见方法及性能比较</span>
-            <span class="prev-text nav-mobile">Prev</span>
-          </a>
         
-          <a class="next" href="/post/svg/">
-            <span class="next-text nav-default">SVG 入门教程</span>
+          <a class="next" href="/post/exchange-two-value/">
+            <span class="next-text nav-default">JavaScript中交换两个变量值的常见方法及性能比较</span>
             <span class="next-text nav-mobile">Next</span>
             <i class="iconfont icon-right"></i>
           </a>
@@ -389,8 +274,8 @@ export default {
     <script src="/lib/gitalk/gitalk-1.2.2.min.js"></script>
   <script type="text/javascript">
   var gitalk = new Gitalk({
-    id: '2018-07-25 08:57:10 \x2b0800 CST',
-    title: '在 Vue 中使用 JSX 的一些注意事项',
+    id: '2018-10-26 09:23:24 \x2b0800 CST',
+    title: 'Git Unlink of File',
     clientID: 'f341468b87f1db91a623',
     clientSecret: 'fe4d5bed8858412750ebfe64cdabe3c67d53ca94',
     repo: 'site-hugo',
