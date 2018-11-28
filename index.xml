@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ChrisShen93</copyright>
-    <lastBuildDate>Fri, 26 Oct 2018 09:23:24 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 28 Nov 2018 16:52:34 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>JS 取文件的 MIME type 为空字符串</title>
+      <link>http://localhost:1313/post/js-file-mimetype/</link>
+      <pubDate>Wed, 28 Nov 2018 16:52:34 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/js-file-mimetype/</guid>
+      <description>今天被提到一个bug：系统中无法上传zip文件和rar文件。 查了一下代码，无法上传zip文件是因为在 input[type=file] 的 accept 属性中漏了一条 applicatio</description>
+    </item>
     
     <item>
       <title>Git Unlink of File</title>

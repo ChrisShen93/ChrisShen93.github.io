@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Git Unlink of File - Chris&#39;s site</title>
+  <title>JS 取文件的 MIME type 为空字符串 - Chris&#39;s site</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,10 +16,9 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="ChrisShen93" />
-  <meta name="description" content="每天到公司打开电脑的第一件事，是拉取同事的最新代码： git pull 然而今天却出了点问题（Windows下），git pull 没有成功，提示如下： Unlink of file &amp;lsquo;.git/objects/pack/pack-****.pack&amp;rsquo; failed. Should I" />
+<meta name="author" content="ChrisShen93" /><meta name="description" content="JS 取文件的 MIME type 为空字符串" />
+<meta name="keywords" content="MIME type, JavaScript" />
 
-  <meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -29,7 +28,7 @@
 <meta name="generator" content="Hugo 0.44" />
 
 
-<link rel="canonical" href="http://localhost:1313/post/git-unlink-of-file/" />
+<link rel="canonical" href="http://localhost:1313/post/js-file-mimetype/" />
 
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -49,20 +48,16 @@
 
 
 
-<meta property="og:title" content="Git Unlink of File" />
-<meta property="og:description" content="每天到公司打开电脑的第一件事，是拉取同事的最新代码： git pull 然而今天却出了点问题（Windows下），git pull 没有成功，提示如下： Unlink of file &lsquo;.git/objects/pack/pack-****.pack&rsquo; failed. Should I" />
+<meta property="og:title" content="JS 取文件的 MIME type 为空字符串" />
+<meta property="og:description" content="JS 取文件的 MIME type 为空字符串" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/post/git-unlink-of-file/" />
+<meta property="og:url" content="http://localhost:1313/post/js-file-mimetype/" />
 
 
 
-<meta property="article:published_time" content="2018-10-26T09:23:24&#43;08:00"/>
+<meta property="article:published_time" content="2018-11-28T16:52:34&#43;08:00"/>
 
-<meta property="article:modified_time" content="2018-10-26T09:23:24&#43;08:00"/>
-
-
-
-
+<meta property="article:modified_time" content="2018-11-28T16:52:34&#43;08:00"/>
 
 
 
@@ -70,20 +65,24 @@
 
 
 
-<meta itemprop="name" content="Git Unlink of File">
-<meta itemprop="description" content="每天到公司打开电脑的第一件事，是拉取同事的最新代码： git pull 然而今天却出了点问题（Windows下），git pull 没有成功，提示如下： Unlink of file &lsquo;.git/objects/pack/pack-****.pack&rsquo; failed. Should I">
 
 
-<meta itemprop="datePublished" content="2018-10-26T09:23:24&#43;08:00" />
-<meta itemprop="dateModified" content="2018-10-26T09:23:24&#43;08:00" />
-<meta itemprop="wordCount" content="318">
+
+
+<meta itemprop="name" content="JS 取文件的 MIME type 为空字符串">
+<meta itemprop="description" content="JS 取文件的 MIME type 为空字符串">
+
+
+<meta itemprop="datePublished" content="2018-11-28T16:52:34&#43;08:00" />
+<meta itemprop="dateModified" content="2018-11-28T16:52:34&#43;08:00" />
+<meta itemprop="wordCount" content="475">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Git Unlink of File"/>
-<meta name="twitter:description" content="每天到公司打开电脑的第一件事，是拉取同事的最新代码： git pull 然而今天却出了点问题（Windows下），git pull 没有成功，提示如下： Unlink of file &lsquo;.git/objects/pack/pack-****.pack&rsquo; failed. Should I"/>
+<meta name="twitter:title" content="JS 取文件的 MIME type 为空字符串"/>
+<meta name="twitter:description" content="JS 取文件的 MIME type 为空字符串"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -146,10 +145,10 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">Git Unlink of File</h1>
+      <h1 class="post-title">JS 取文件的 MIME type 为空字符串</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2018-10-26 </span>
+        <span class="post-time"> 2018-11-28 </span>
         
         
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> times read </span>
@@ -162,7 +161,15 @@
   <h2 class="post-toc-title">Contents</h2>
   
   <div class="post-toc-content always-active">
-    
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#疑惑">疑惑</a></li>
+<li><a href="#总结">总结</a></li>
+</ul></li>
+</ul>
+</nav>
   </div>
 </div>
 
@@ -171,35 +178,35 @@
 
     
     <div class="post-content">
-      <p>每天到公司打开电脑的第一件事，是拉取同事的最新代码：</p>
+      
 
-<pre><code class="language-shell">git pull
+<p>今天被提到一个bug：系统中无法上传zip文件和rar文件。</p>
+
+<p>查了一下代码，无法上传zip文件是因为在 <code>input[type=file]</code> 的 <code>accept</code> 属性中漏了一条 <code>application/x-zip-compressed</code>。</p>
+
+<p>而 rar 的问题出在，<code>file.type</code> 取出的值为空字符串。</p>
+
+<pre><code class="language-javascript">const fileMime = file.type
+console.log(fileMime === '') // true
 </code></pre>
 
-<p>然而今天却出了点问题（Windows下），git pull 没有成功，提示如下：</p>
+<p>经过一番查阅，原因锁定在 <code>文件嗅探算法(File Sniffing Algorithm)</code>。</p>
 
-<blockquote>
-<p>Unlink of file &lsquo;.git/objects/pack/pack-****.pack&rsquo; failed. Should I try again? (y/n)</p>
-</blockquote>
+<p>该算法的具体描述可见：<a href="https://mimesniff.spec.whatwg.org/">whatwg</a></p>
 
-<p>在 stackoverflow 上搜到相关问题，说是因为有其他程序占用了文件。可以设置 git 的一个新的环境变量 <code>GIT_ASK_YESNO</code> 来避免 Windows 上出现 <code>unlink</code> <code>rename</code> <code>rmdir</code> 后出现的类似问题。</p>
+<p>这套 嗅探算法 的核心在于 <code>字节模式匹配(byte pattern matching)</code>。</p>
 
-<p>由于不知道设置该变量后会采用 yes 还是 no，因此采取了万（wu）能（chi）的 重启/注销 大法。然而问题依旧。</p>
+<p>对于一个 <em>WinRAR</em> 文件来说，只有匹配到 <strong>52 61 72 20 1A 07 00</strong> 这一特殊的字节模式，<code>file.type</code> 才会返回 <code>application/x-rar-compressed</code>，而在我的例子中，却是 <strong>52 61 72 21 1A 07 00</strong>，所以按照文件嗅探算法的规范，返回了一个空字符串。</p>
 
-<p>最后使用了下面两行命令解决：</p>
+<h2 id="疑惑">疑惑</h2>
 
-<pre><code class="language-shell">git gc --auto
-git repack -d -l
-</code></pre>
+<p>在我的场景中，打开文件选择框，是可以看见rar格式文件的。无法上传rar文件实际上是在我发送ajax之前对文件类型又进行了一次判断，这一次没有取到想要的 MIME type。</p>
 
-<p>上面的两行代码在 git 文档中有解释</p>
+<h2 id="总结">总结</h2>
 
-<blockquote>
-<p>With this option, git gc checks whether any housekeeping is required; if not, it exits without performing any work. Some git commands run git gc &ndash;auto after performing operations that could create many loose objects. Housekeeping is required if there are too many loose objects or too many packs in the repository.
-If the number of loose objects exceeds the value of the gc.auto configuration variable, then all loose objects are combined into a single pack using git repack -d -l. Setting the value of gc.auto to 0 disables automatic packing of loose objects.</p>
-</blockquote>
+<p>对于有文件类型验证的前端需求，可以考虑 MIME type + extension name 的方式，而不是单纯地相信浏览器的 嗅探。</p>
 
-<p><a href="https://git-scm.com/docs/git-gc#git-gc---auto">原文地址</a></p>
+<p>推荐一个js库：<a href="https://github.com/rsdoiel/mimetype-js">mimetype-js</a></p>
 
     </div>
 
@@ -211,7 +218,7 @@ If the number of loose objects exceeds the value of the gc.auto configuration va
   </p>
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
-    <span class="item-content">2018-10-26</span>
+    <span class="item-content">2018-11-28</span>
   </p>
   
   
@@ -243,14 +250,9 @@ If the number of loose objects exceeds the value of the gc.auto configuration va
       
       <nav class="post-nav">
         
-          <a class="prev" href="/post/js-file-mimetype/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">JS 取文件的 MIME type 为空字符串</span>
-            <span class="prev-text nav-mobile">Prev</span>
-          </a>
         
-          <a class="next" href="/post/exchange-two-value/">
-            <span class="next-text nav-default">JavaScript中交换两个变量值的常见方法及性能比较</span>
+          <a class="next" href="/post/git-unlink-of-file/">
+            <span class="next-text nav-default">Git Unlink of File</span>
             <span class="next-text nav-mobile">Next</span>
             <i class="iconfont icon-right"></i>
           </a>
@@ -279,8 +281,8 @@ If the number of loose objects exceeds the value of the gc.auto configuration va
     <script src="/lib/gitalk/gitalk-1.2.2.min.js"></script>
   <script type="text/javascript">
   var gitalk = new Gitalk({
-    id: '2018-10-26 09:23:24 \x2b0800 CST',
-    title: 'Git Unlink of File',
+    id: '2018-11-28 16:52:34 \x2b0800 CST',
+    title: 'JS 取文件的 MIME type 为空字符串',
     clientID: 'f341468b87f1db91a623',
     clientSecret: 'fe4d5bed8858412750ebfe64cdabe3c67d53ca94',
     repo: 'site-hugo',
